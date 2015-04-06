@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>1E880395-7E7B-4274-A061-7A2A414C55FC</string>
+	<key>IDESourceControlProjectName</key>
+	<string>FastEduMobile</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>8366FDD1C6AB945B19DC2DCA3BA5075F777A5AF5</key>
+		<string>https://github.com/Stephentran/fastedumobile.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>platforms/ios/FastEduMobile.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>8366FDD1C6AB945B19DC2DCA3BA5075F777A5AF5</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/Stephentran/fastedumobile.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>8366FDD1C6AB945B19DC2DCA3BA5075F777A5AF5</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>8366FDD1C6AB945B19DC2DCA3BA5075F777A5AF5</string>
+			<key>IDESourceControlWCCName</key>
+			<string>fastedumobile</string>
+		</dict>
+	</array>
+</dict>
+</plist>

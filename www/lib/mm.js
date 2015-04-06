@@ -381,6 +381,7 @@ var MM = {
         }
         // Load additional Js files, see MOBILE-239
         MM.loadExtraJs();
+        MM._checkFBLoginAndDisableLoginForm();
     },
 
     _displayAddSite: function() {
@@ -793,7 +794,45 @@ var MM = {
         $('#username').focus();
         MM.util.showKeyboard();
     },
-
+    _checkFBLoginAndDisableLoginForm: function(){
+        var fbLoginStatusSuccess = function (userData) {
+            if(userData.status == "connected")
+            {
+                $("#login-details").css("display", "none");
+                var siteurl = $('#url').val();
+                MM.saveSite("admin","Password1@",siteurl);
+            }
+            
+        }
+        var fbLoginStatusFailure = function (userData) {
+            
+        }
+        facebookConnectPlugin.getLoginStatus(fbLoginStatusSuccess, fbLoginStatusFailure);
+    },
+    _loginByFacebook: function() {
+        
+        var fbLoginStatusSuccess = function (userData) {
+            if(userData.status == "connected")
+            {
+                var siteurl = $('#url').val();
+                MM.saveSite("admin","Password1@",siteurl);
+            }
+            
+        }
+        var fbLoginStatusFailure = function (userData) {
+            var fbLoginSuccess = function (userData) {
+                alert("You are logged in!");
+            }
+            
+            facebookConnectPlugin.login(["public_profile","email"],
+                                        fbLoginSuccess,
+                                        function (error) { alert("" + error) }
+                                        );
+        }
+        facebookConnectPlugin.getLoginStatus(fbLoginStatusSuccess, fbLoginStatusFailure);
+        
+        
+    },
     /**
      * Expand the add site form with the username and password fields
      */
