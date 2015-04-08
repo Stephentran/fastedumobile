@@ -1,0 +1,327 @@
+/* CSS Document */
+
+
+*{
+text-decoration:none;
+margin:0;
+padding:0;
+border:0;
+font-size:13px;
+list-style:none;
+color:#272727;
+font-family:Arial, Helvetica, sans-serif;
+}
+body{
+background:#fff;
+}
+*{
+text-decoration:none;
+margin:0;
+padding:0;
+border:0;
+font-size:13px;
+list-style:none;
+color:#272727;
+font-family:Arial, Helvetica, sans-serif;
+}
+body{
+background:#fff
+}
+.row{
+margin:0;
+}
+.key-login ul{
+float:left;
+margin-top:20px;
+width:100%;
+}
+
+.input-box input{
+font-size:13px;
+float:left;
+width:60%
+}
+.input-box{
+font-size:13px;
+float:left;
+height:60px;
+width:100%;
+border:1px solid #000000;
+  border-radius: 4px;
+}
+.form-email {
+float:left;
+width:100%;
+background:#fff url(../images/bg-app.jpg) repeat center top;
+text-align:center
+}
+.form-email img{
+margin:20px 0;
+}
+.input-box img{
+float:left;
+width:41px;
+margin:18px 0 10px 10px;
+}
+.content-page{
+float:left;
+padding:0 50px;
+}
+.input-box input {
+text-indent:15px;
+color:#000000;
+background:none;
+  font-size: 20px;
+  float: left;
+  margin: 10px 0 0 10px;
+  height: 39px;
+  width: 85%;
+}
+.key-login{
+  font-size: 13px;
+  float: left;
+  width: 100%;
+
+}
+.input-box a {
+  float: left;
+  width: 100%;
+  padding: 15px 0;
+  border-radius: 4px;
+  color: #fff;
+  font-weight: normal;
+  font-size: 22px;
+  background: #cc3537;
+  margin:30px 0 0 0
+}
+
+.not-key{
+float:left;
+width:100%
+}
+.button-xt{
+  float: left;
+  width: 100%;
+
+}
+.button-xt a{
+background:#cc3537;
+color:#fff;
+width:100%;
+float:left;-size:20px;
+border-radius:4px;
+margin-top: 30px;
+padding:20px 0;
+}
+.not-key img{
+float:left;
+
+width:42px;
+margin:0 23px 0 0 ;
+}
+.not-key{
+ float: left;
+  width: 100%;
+}
+.not-key {
+float:left;
+width:100%;
+margin:120px 0 0 0;
+}
+.not-key p{
+float:left;
+color:#cc3537;padding-top:6px;
+text-transform:uppercase;
+font-size:22px;
+}
+.bottom-key{
+float:left;
+width:100%;
+margin:70px 0 50px 0;
+}
+.bottom-key p{
+font-size:22px;
+color:#000;
+float:left;
+width:100%;
+}
+@font-face{
+ font-family: segoeui !important;
+ src: url("../fonts/UTM Avo.ttf") !important;
+}
+@font-face{
+ font-family: utmeremitage_font !important;
+ src: url("../fonts/UTM Avo.ttf") !important;
+}
+
+/*-- login--*/
+.form-login{
+float:left;
+width:100%;
+}
+.maps-app{
+float:left;
+background-position:10%;
+width:100%;
+background:url(../images/maps-login.png) no-repeat center top;
+}
+.slider-img{
+float:left;
+  margin-bottom: 27px;
+width:100%;
+}
+
+.input-login input{
+font-size:13px;
+float:left;
+width:60%
+}
+.input-login{
+font-size:13px;
+float:left;
+height:60px;
+width:100%;
+border:1px solid #000000;
+-webkit-border-top-left-radius: 4px;
+-webkit-border-top-right-radius: 4px;
+-moz-border-radius-topleft: 4px;
+-moz-border-radius-topright: 4px;
+border-top-left-radius: 4px;
+border-top-right-radius: 4px;
+}
+.input-login img{
+float:left;
+width:41px;
+margin:18px 0 10px 10px;
+}
+
+.input-login input {
+text-indent:15px;
+color:#000000;
+background:none;
+  font-size: 20px;
+  float: left;
+  margin: 10px 0 0 10px;
+  height: 39px;
+  width: 85%;
+}
+
+.input-login a {
+  float: left;
+  width: 100%;
+  padding: 15px 0;
+  border-radius: 4px;
+  color: #fff;
+  font-weight: normal;
+  font-size: 22px;
+  background: #cc3537;
+  margin:30px 0 0 0
+}
+.pass-li{
+border:1px solid #000000;
+-webkit-border-bottom-right-radius: 4px;
+-webkit-border-bottom-left-radius: 4px;
+-moz-border-radius-bottomright: 4px;
+-moz-border-radius-bottomleft: 4px;
+border-bottom-right-radius: 4px;
+border-bottom-left-radius: 4px;
+border-radius:0;
+-webkit-border-bottom-right-radius: 4px;
+-webkit-border-bottom-left-radius: 4px;
+-moz-border-radius-bottomright: 4px;
+-moz-border-radius-bottomleft: 4px;
+border-bottom-right-radius: 4px;
+border-bottom-left-radius: 4px;
+border-top:0;
+}
+.pass-li input{
+width:80%
+}
+.button-login a{
+  float: left;
+  width:100%;
+  padding-bottom:17px;
+  padding-top:17px;
+  color: #fff;
+  background: #cc3537;
+  border-radius: 4px;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.button-login{
+margin-top:20px;
+float:left;
+width:100%;
+}
+.pass-req{
+float:left;
+width:100%;
+text-align:center;
+margin:30px 0 40px 0;
+text-decoration:underline;
+text-transform:uppercase;
+
+}
+.pass-req a{
+font-size:20px;
+color:#000;
+text-align:center;
+}
+.button-footer{
+float:left;
+width:100%;
+margin:20px 0 0 0;
+}
+.face-bg{
+float:left;
+width:50%;
+background:#3b5998;
+height:80px;
+}
+.fe-bg{
+float:left;
+width:50%;
+background:#69b154;
+height:80px;
+}
+.face-bg a{
+  line-height: 86px;
+color:#fff;
+text-transform:uppercase;
+font-size:18px;
+background:#3b5998;
+}
+.fe-bg a{
+  line-height: 86px;
+font-size:18px;
+color:#fff;
+text-transform:uppercase;
+background:#69b154;
+}
+/*-- css sign up--*/
+
+.button-signup a{
+  float: left;
+  color: #fff;
+  background: #cc3537;
+  border-radius: 4px;
+  width:100%;
+  padding:15px 0;
+  font-size: 18px;
+  font-weight: normal;
+}
+.button-signup a:nth child(1){
+margin-right:10px;
+}
+.button-signup{
+margin:20px 0 50px 0;
+float:left;
+width:100%;
+}
+.pass-li img:nth child(2){
+float:right;
+}
+.sun-icon{
+float:right !important;
+}

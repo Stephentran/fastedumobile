@@ -20,13 +20,22 @@ module.exports = [
         "clobbers": [
             "facebookConnectPlugin"
         ]
+    },
+    {
+        "file": "plugins/org.apache.cordova.splashscreen/www/splashscreen.js",
+        "id": "org.apache.cordova.splashscreen.SplashScreen",
+        "clobbers": [
+            "navigator.splashscreen"
+        ]
     }
 ];
 module.exports.metadata = 
 // TOP OF METADATA
 {
     "org.apache.cordova.globalization": "0.3.4",
-    "com.phonegap.plugins.facebookconnect": "0.11.0"
+    "com.phonegap.plugins.facebookconnect": "0.11.0",
+    "org.apache.cordova.inappbrowser": "0.6.0",
+    "org.apache.cordova.splashscreen": "1.0.0"
 }
 // BOTTOM OF METADATA
 });

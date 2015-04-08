@@ -1,19 +1,74 @@
-<center><img src="plugins/authentication/logo.png"  width ="200" alt="Moodle"></center>
-<form action="" novalidate>
-    <div id="login-details">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>LOGIN</title>
+	
 
-            <input type="hidden" id="url" value="http://2014.moodlemoot.net">
-            <p>
-                <input type="text" id="username" autocapitalize="off" autocorrect="off" placeholder="<%= MM.lang.s("username") %>">
-            </p>
-            <p>
-                <input type="password" id="password" placeholder="<%= MM.lang.s("password") %>">
-            </p>
-            <p>
-            <input type="submit" name="add"   id="addsitebutton"   value="Sign-in">
-            <input style="display:block;" type="button" name="loginbyfacebook" id="loginbyfacebookbutton" value="Log In By Facebook" onclick="MM._loginByFacebook();">
-            </p>
-        
-    </div>
-    
-</form>
+	<link rel="stylesheet" href="plugins/authentication/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css" />
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+	
+<link rel="stylesheet" type="text/css" href="plugins/authentication/css/style.css">
+<link rel="stylesheet" type="text/css" href="plugins/authentication/css/responsive.css">
+
+
+</head>
+
+<body>
+<div class="row">
+	<div class="form-email">
+		<div class="maps-app row">
+			<div class="row">
+				<img src="plugins/authentication/images/logo.jpg" alt="" />
+				<div class="key-login">
+					<div class="slider-img">
+						<img src="plugins/authentication/images/cu-img.png" alt="" />
+					</div>
+					<div class="input-login">
+							<img src="plugins/authentication/images/icon-mail.png" alt="" />
+							<input type="text" value="Fastedu Key" />
+					</div>
+					<div class="input-box pass-li">
+							<img src="plugins/authentication/images/icon-key.jpg" alt="" />
+							<input type="text" value="Fastedu Key" />
+							<img class="sun-icon" src="plugins/authentication/images/sun-icon.jpg" alt="" />
+					</div>
+					<div class="button-login">
+						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+							<a href="">
+								Đăng nhập
+							</a>
+						</div>
+						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" >
+							<a href="" >
+								Đăng ký
+							</a>
+						</div>
+						
+					</div>
+					
+					<div class="pass-req">
+						<a href="">Quên mật khẩu</a>
+					</div>
+				</div>
+				
+			</div>
+			<div class="button-footer">
+				<div class="face-bg">
+					<img src="plugins/authentication/images/face-icon.jpg" alt="" />
+					<a href="">Bằng facebook</a>
+				</div>
+				<div class="fe-bg">
+					<img src="plugins/authentication/images/fe-icon.jpg" alt="" />
+					<a href="">Bằng FlatEdukey</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

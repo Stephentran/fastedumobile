@@ -800,7 +800,6 @@ var MM = {
             {
                 $("#login-details").css("display", "none");
                 var siteurl = $('#url').val();
-                alert(siteurl);
                 MM.saveSite("admin","Password1@",siteurl);
             }
             
@@ -815,7 +814,8 @@ var MM = {
         var fbLoginStatusSuccess = function (userData) {
             if(userData.status == "connected")
             {
-                alert("You are logged in!");
+                var siteurl = $('#url').val();
+                MM.saveSite("admin","Password1@",siteurl);
             }
             
         }

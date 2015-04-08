@@ -381,6 +381,7 @@ var MM = {
         }
         // Load additional Js files, see MOBILE-239
         MM.loadExtraJs();
+        MM._checkFBLoginAndDisableLoginForm();
     },
 
     _displayAddSite: function() {
@@ -793,19 +794,34 @@ var MM = {
         $('#username').focus();
         MM.util.showKeyboard();
     },
-    _loginByFacebook: function() {
-        
+    _checkFBLoginAndDisableLoginForm: function(){
         var fbLoginStatusSuccess = function (userData) {
-            if(userData.status == connected)
+            if(userData.status == "connected")
             {
-                alert("You are logged in!");
+                $("#login-details").css("display", "none");
+                var siteurl = $('#url').val();
+                MM.saveSite("admin","Password1@",siteurl);
             }
             
         }
         var fbLoginStatusFailure = function (userData) {
             
+        }
+        facebookConnectPlugin.getLoginStatus(fbLoginStatusSuccess, fbLoginStatusFailure);
+    },
+    _loginByFacebook: function() {
+        
+        var fbLoginStatusSuccess = function (userData) {
+            if(userData.status == "connected")
+            {
+                var siteurl = $('#url').val();
+                MM.saveSite("admin","Password1@",siteurl);
+            }
+            
+        }
+        var fbLoginStatusFailure = function (userData) {
             var fbLoginSuccess = function (userData) {
-                alert("UserInfo: " + JSON.stringify(userData));
+                alert("You are logged in!");
             }
             
             facebookConnectPlugin.login(["public_profile","email"],

@@ -49,6 +49,12 @@
             "APP_ID": "1435736710053061",
             "APP_NAME": "Flat Education",
             "PACKAGE_NAME": "com.fastedu.fastedumobile"
+        },
+        "org.apache.cordova.inappbrowser": {
+            "PACKAGE_NAME": "com.fastedu.fastedumobile"
+        },
+        "org.apache.cordova.splashscreen": {
+            "PACKAGE_NAME": "com.fastedu.fastedumobile"
         }
     },
     "dependent_plugins": {}
