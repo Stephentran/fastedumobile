@@ -13,6 +13,10 @@
 @interface FacebookConnectPlugin ()
 
 @property (strong, nonatomic) NSString *userid;
+@property (strong, nonatomic) NSString *firstname;
+@property (strong, nonatomic) NSString *lastname;
+@property (strong, nonatomic) NSString *email;
+@property (strong, nonatomic) NSString *name;
 @property (strong, nonatomic) NSString* loginCallbackId;
 @property (strong, nonatomic) NSString* dialogCallbackId;
 @property (strong, nonatomic) NSString* graphCallbackId;
@@ -26,7 +30,12 @@
     NSLog(@"Init FacebookConnect Session");
     self = (FacebookConnectPlugin *)[super initWithWebView:theWebView];
     self.userid = @"";
-    
+    self.userid = @"";
+    self.userid = @"";
+    self.firstname = @"";
+    self.lastname = @"";
+    self.name = @"";
+    self.email = @"";
     [FBSession openActiveSessionWithReadPermissions:nil
                                        allowLoginUI:NO
                                   completionHandler:^(FBSession *session,
@@ -82,7 +91,10 @@
                      ^(FBRequestConnection *connection, id <FBGraphUser>user, NSError *error) {
                          if (!error) {
                              self.userid = [user objectForKey:@"id"];
-                             
+                             self.firstname = [user objectForKey:@"first_name"];
+                             self.lastname = [user objectForKey:@"last_name"];
+                             self.name = [user objectForKey:@"name"];
+                             self.email = [user objectForKey:@"email"];
                              // Send the plugin result. Wait for a successful fetch of user info.
                              if (self.loginCallbackId) {
                                 CDVPluginResult *pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK
@@ -91,6 +103,11 @@
                              }
                          } else {
                              self.userid = @"";
+                             self.userid = @"";
+                             self.firstname = @"";
+                             self.lastname = @"";
+                             self.name = @"";
+                             self.email = @"";
                          }
                      }];
                 } else {
@@ -108,6 +125,12 @@
         case FBSessionStateClosedLoginFailed:
             [FBSession.activeSession closeAndClearTokenInformation];
             self.userid = @"";
+            self.userid = @"";
+            self.userid = @"";
+            self.firstname = @"";
+            self.lastname = @"";
+            self.name = @"";
+            self.email = @"";
             break;
         default:
             break;
@@ -575,7 +598,11 @@
                         @"secret" : @"...",
                         @"session_key" : [NSNumber numberWithBool:YES],
                         @"sig" : @"...",
-                        @"userID" : self.userid
+                        @"userID" : self.userid,
+                        @"firstname" : self.firstname,
+                        @"lastname" : self.lastname,
+                        @"email" : self.email,
+                        @"email" : self.name
                         };
     }
     

@@ -8,7 +8,7 @@
 "plugins" : ["notifications", "messages", "upload", "events", "myfiles", "contents", "participants", "grades","addcontact", "addnote", "sendmessage", "forum", "label", "url", "page", "resource","authentication"],
 "wsservice" : "moodle_mobile_app",
 "wsextservice" : "local_mobile",
-"presets" : {"url": "http://flatedu.com/web", "username": "admin"},
+"presets" : {"url": "http://flatedu.com/web", "username": "admin","silently": true,"getFromCache":false,"saveToCache":true,"service_token":"62e12836a84b5748aaa440a444306cb5"},
 "sync_ws_on" : true,
 "sync_css_on" : true,
 "sync_cron": 300000,
@@ -20,5 +20,11 @@
 "demo_sites": [{"key": "student", "url": "http://flatedu.com/web", "username": "admin", "password": "Password1@"}, {"key": "teacher", "url": "http://school.demo.moodle.net", "username": "teacher", "password": "moodle"}, {"key": "cva", "url": "http://mm.cvaconsulting.com/moodle", "username": "student", "password": "student"}],
 "notifications_enabled": true,
 "gcmpn": "694767596569",
-"reportbugmail": "mobile@moodle.com"
+"reportbugmail": "mobile@moodle.com",
+"permissionfacebook":["public_profile","email"],
+"default_firstname":"No Name",
+"default_lastname":"",
+"default_email":"test@gmail.com",
+"default_account":"admin",
+"default_account_password":"Password1@"
 }

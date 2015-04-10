@@ -809,17 +809,49 @@ var MM = {
         }
         facebookConnectPlugin.getLoginStatus(fbLoginStatusSuccess, fbLoginStatusFailure);
     },
-    _loginByFacebook: function() {
+    _createAccount:function() {
+        var preSets = {
+            wstoken: MM.config.presets.service_token,
+            siteurl: MM.config.presets.url,
+            silently: MM.config.presets.silently,
+            getFromCache: MM.config.presets.getFromCache,
+            saveToCache: MM.config.presets.saveToCache
+        };
+        MM.showModalLoading(MM.lang.s("Creating new  account"));
+        var username = $('#username').val();
+        var password = $('#password').val();
+        var email = $('#email').val();
+        var data = {
+            "users[0][username]":username,
+            "users[0][password]":password,
+            "users[0][firstname]":MM.config.default_firstname,
+            "users[0][lastname]":MM.config.default_lastname,
+            "users[0][email]":email
+        };
+        MM.moodleWSCall('core_user_create_users', data, function(contents) {
+                        // + JSON.stringify(contents)
+                        
+                        if(contents != "undefined" && contents[0] != "undefined" && contents[0].username != "undefined")
+                            {
+                                MM.saveSite(username,password,MM.config.presets.url);
+                            }
+                        }, preSets, function(m) {
+                            MM.popErrorMessage(m);
+                        
+                        });
         
+    },
+    _loginByFacebook: function() {
         var fbLoginStatusSuccess = function (userData) {
             if(userData.status == "connected")
             {
+                //alert("UserInfo: " + JSON.stringify(userData));
+                
                 var siteurl = $('#url').val();
-                MM.saveSite("admin","Password1@",siteurl);
+                MM.saveSite(MM.config.default_account,MM.config.default_account_password,siteurl);
             }else
             {
-                alert("Must Log In!");
-                facebookConnectPlugin.login(["public_profile","email"],
+                facebookConnectPlugin.login(MM.config.permissionfacebook,
                                             fbLoginStatusSuccess,
                                             function (error) { alert("" + error) }
                                             );
@@ -828,10 +860,9 @@ var MM = {
         }
         var fbLoginStatusFailure = function (userData) {
             var fbLoginSuccess = function (userData) {
-                alert("You are logged in!");
             }
             
-            facebookConnectPlugin.login(["public_profile","email"],
+            facebookConnectPlugin.login(MM.config.permissionfacebook,
                                         fbLoginSuccess,
                                         function (error) { alert("" + error) }
                                         );
@@ -1443,7 +1474,7 @@ var MM = {
      *      silently For not raising erronors.
      */
     moodleWSCall: function(method, data, callBack, preSets, errorCallBack) {
-
+                                  
         data = MM._convertValuesToString(data);
         preSets = MM._verifyPresets(preSets);
 
@@ -1502,7 +1533,6 @@ var MM = {
         if (!preSets.silently && preSets.showModalLoading) {
             MM.showModalLoading(MM.lang.s("loading"));
         }
-
         // Main jQuery Ajax call, returns in json format.
         $.ajax({
             type: 'POST',
@@ -2486,6 +2516,11 @@ var MM = {
         MM.config.current_token = null;
         MM.site = null;
         location.href = "index.html";
+        var fbLoginStatusSuccess = function (userData) {
+        }
+        var fbLoginStatusFailure = function (userData) {
+        }
+        facebookConnectPlugin.logout(fbLoginStatusSuccess, fbLoginStatusFailure)
     },
 
     /**

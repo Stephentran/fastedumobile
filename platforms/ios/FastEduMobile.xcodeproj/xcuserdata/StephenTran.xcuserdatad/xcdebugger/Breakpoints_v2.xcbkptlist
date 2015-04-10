@@ -14,25 +14,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "814"
-            endingLineNumber = "814"
-            landmarkName = "fbLoginStatusSuccess"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FastEduMobile/Plugins/com.phonegap.plugins.facebookconnect/FacebookConnectPlugin.m"
-            timestampString = "450369482.84133"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "252"
-            endingLineNumber = "252"
-            landmarkName = "-login:"
-            landmarkType = "5">
+            endingLineNumber = "814">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
