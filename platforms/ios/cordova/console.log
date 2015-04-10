@@ -136,3 +136,39 @@ To disable web storage backup to iCloud, set the BackupWebStorage preference to 
 2015-04-09 00:21:56.896 FastEduMobile[27758:189068] [CDVTimer][TotalPluginStartup] 19.931972ms
 2015-04-09 00:21:56.958 FastEduMobile[27758:189068] Resetting plugins due to page load.
 2015-04-09 00:21:57.096 FastEduMobile[27758:189068] Finished load of: file:///Users/StephenTran/Library/Developer/CoreSimulator/Devices/FA375D21-F83E-411C-8F76-A816947265C1/data/Containers/Bundle/Application/D1A2DF5B-FD6E-4724-BF77-A9CCFD7198C2/FastEduMobile.app/www/index.html
+2015-04-09 21:18:07.801 FastEduMobile[42660:269554] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/StephenTran/Library/Developer/CoreSimulator/Devices/FA375D21-F83E-411C-8F76-A816947265C1/data/Containers/Data/Application/593ACFC7-A939-433F-B539-59AC3AAEB705/Library/Cookies/Cookies.binarycookies
+2015-04-09 21:18:07.874 FastEduMobile[42660:269554] Apache Cordova native platform version 3.8.0 is starting.
+2015-04-09 21:18:07.875 FastEduMobile[42660:269554] Multi-tasking -> Device: YES, App: YES
+2015-04-09 21:18:07.877 FastEduMobile[42660:269554] Unlimited access to network resources
+2015-04-09 21:18:07.882 FastEduMobile[42660:269554] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-04-09 21:18:08.145 FastEduMobile[42660:269554] Init FacebookConnect Session
+2015-04-09 21:18:08.151 FastEduMobile[42660:269554] [CDVTimer][facebookconnectplugin] 5.154967ms
+2015-04-09 21:18:08.218 FastEduMobile[42660:269554] [CDVTimer][splashscreen] 67.384005ms
+2015-04-09 21:18:08.218 FastEduMobile[42660:269554] [CDVTimer][TotalPluginStartup] 72.907984ms
+2015-04-09 21:18:08.280 FastEduMobile[42660:269554] Resetting plugins due to page load.
+2015-04-09 21:18:08.456 FastEduMobile[42660:269554] Finished load of: file:///Users/StephenTran/Library/Developer/CoreSimulator/Devices/FA375D21-F83E-411C-8F76-A816947265C1/data/Containers/Bundle/Application/CC083CB6-F347-44F4-869B-C95CF0EE27EF/FastEduMobile.app/www/index.html
+2015-04-10 01:11:01.703 FastEduMobile[51964:403254] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/StephenTran/Library/Developer/CoreSimulator/Devices/FA375D21-F83E-411C-8F76-A816947265C1/data/Containers/Data/Application/28915EBE-7BB8-41BE-936E-0E530A6814B8/Library/Cookies/Cookies.binarycookies
+2015-04-10 01:11:01.795 FastEduMobile[51964:403254] Apache Cordova native platform version 3.8.0 is starting.
+2015-04-10 01:11:01.796 FastEduMobile[51964:403254] Multi-tasking -> Device: YES, App: YES
+2015-04-10 01:11:01.810 FastEduMobile[51964:403254] Unlimited access to network resources
+2015-04-10 01:11:01.817 FastEduMobile[51964:403254] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-04-10 01:11:02.084 FastEduMobile[51964:403254] Init FacebookConnect Session
+2015-04-10 01:11:02.089 FastEduMobile[51964:403254] [CDVTimer][facebookconnectplugin] 4.586041ms
+2015-04-10 01:11:02.169 FastEduMobile[51964:403254] [CDVTimer][splashscreen] 80.688000ms
+2015-04-10 01:11:02.170 FastEduMobile[51964:403254] [CDVTimer][TotalPluginStartup] 85.541010ms
+2015-04-10 01:11:02.229 FastEduMobile[51964:403254] Resetting plugins due to page load.
+2015-04-10 01:11:02.456 FastEduMobile[51964:403254] Finished load of: file:///Users/StephenTran/Library/Developer/CoreSimulator/Devices/FA375D21-F83E-411C-8F76-A816947265C1/data/Containers/Bundle/Application/2F9256FD-5570-4885-A943-25DD020EF874/FastEduMobile.app/www/index.html

@@ -68,9 +68,9 @@
 <!--    <gap:splash src="img/splash/ios/ipad_landscape.png" gap:platform="ios" width="1024" height="748"/>-->
 <!--    <gap:splash src="img/splash/ios/ipad_retina_portrait.png" gap:platform="ios" width="1536" height="2008"/>-->
 <!--    <gap:splash src="img/splash/ios/ipad_retina_landscape.png" gap:platform="ios" width="2048" height="1496"/>-->
-    <preference name="SplashScreen" value="img/splash/ios/iphone_retina_portrait.png" />
-    <preference name="SplashScreenDelay" value="100000" />
-    <preference name="SplashMaintainAspectRatio" value="false" />
+<!--    <preference name="SplashScreen" value="img/splash/ios/iphone_retina_portrait.png" />-->
+<!--    <preference name="SplashScreenDelay" value="10000" />-->
+<!--    <preference name="SplashMaintainAspectRatio" value="false" />-->
 
     <gap:platform name="ios" />
     <gap:platform name="android" />

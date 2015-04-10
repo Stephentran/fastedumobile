@@ -816,6 +816,13 @@ var MM = {
             {
                 var siteurl = $('#url').val();
                 MM.saveSite("admin","Password1@",siteurl);
+            }else
+            {
+                alert("Must Log In!");
+                facebookConnectPlugin.login(["public_profile","email"],
+                                            fbLoginStatusSuccess,
+                                            function (error) { alert("" + error) }
+                                            );
             }
             
         }
