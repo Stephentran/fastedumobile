@@ -841,14 +841,39 @@ var MM = {
                         });
         
     },
+    _login: function() {
+        var siteurl = $('#url').val();
+        MM.saveSite($('#username'),$('#password '),MM.config.preSets.preSets.siteurl);
+    },
     _loginByFacebook: function() {
         var fbLoginStatusSuccess = function (userData) {
             if(userData.status == "connected")
             {
-                //alert("UserInfo: " + JSON.stringify(userData));
+                var preSets = {
+                wstoken: MM.config.presets.custom_service,
+                siteurl: MM.config.presets.url,
+                silently: MM.config.presets.silently,
+                getFromCache: MM.config.presets.getFromCache,
+                saveToCache: MM.config.presets.saveToCache
+                };
                 
-                var siteurl = $('#url').val();
-                MM.saveSite(MM.config.default_account,MM.config.default_account_password,siteurl);
+                MM.siteurl = preSets.siteurl;
+                
+                var service = MM._determineService(preSets.siteurl);
+                
+                var data = {
+                    "email":userData.authResponse.email,
+                    "firstname":userData.authResponse.firstname,
+                    "lastname":userData.authResponse.lastname,
+                    "code":"123456",
+                    "service":service
+                };
+                MM.moodleWSCall('user_create_facebook_user', data, function(contents) {
+                                MM._saveToken(contents.token);
+                                },preSets,function(m){
+                                MM.popErrorMessage(m);
+                                });
+                
             }else
             {
                 facebookConnectPlugin.login(MM.config.permissionfacebook,
@@ -1124,7 +1149,7 @@ var MM = {
      */
     addSite: function(e) {
 
-        e.preventDefault();
+        //e.preventDefault();
 
         var siteurl = MM.util.formatURL($('#url').val());
         var username = $.trim($('#username').val());
@@ -1474,7 +1499,6 @@ var MM = {
      *      silently For not raising erronors.
      */
     moodleWSCall: function(method, data, callBack, preSets, errorCallBack) {
-                                  
         data = MM._convertValuesToString(data);
         preSets = MM._verifyPresets(preSets);
 
@@ -1488,8 +1512,6 @@ var MM = {
             });
             return;
         }
-
-
         data.wsfunction = method;
         data.wstoken = preSets.wstoken;
 
@@ -1515,11 +1537,9 @@ var MM = {
                 return true;
             }
         }
-
         if (MM._getDataFromCache(preSets, ajaxData, callBack, errorCallBack)) {
             return true;
         }
-
         // If we arrive here, and we are not connected, thrown a network error message.
         if (!MM.deviceConnected()) {
             if (typeof(errorCallBack) === "function"){
@@ -1529,7 +1549,6 @@ var MM = {
             }
             return true;
         }
-
         if (!preSets.silently && preSets.showModalLoading) {
             MM.showModalLoading(MM.lang.s("loading"));
         }

@@ -8,7 +8,7 @@
 "plugins" : ["notifications", "messages", "upload", "events", "myfiles", "contents", "participants", "grades","addcontact", "addnote", "sendmessage", "forum", "label", "url", "page", "resource","authentication"],
 "wsservice" : "moodle_mobile_app",
 "wsextservice" : "local_mobile",
-"presets" : {"url": "http://flatedu.com/web", "username": "admin","silently": true,"getFromCache":false,"saveToCache":true,"service_token":"62e12836a84b5748aaa440a444306cb5"},
+"presets" : {"url": "http://flatedu.com/web", "username": "admin","silently": true,"getFromCache":false,"saveToCache":true,"service_token":"62e12836a84b5748aaa440a444306cb5","custom_service":"3cbf84199132b8dc52f451e275714cdc"},
 "sync_ws_on" : true,
 "sync_css_on" : true,
 "sync_cron": 300000,

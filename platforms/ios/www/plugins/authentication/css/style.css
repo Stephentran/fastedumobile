@@ -25,7 +25,7 @@ color:#272727;
 font-family:Arial, Helvetica, sans-serif;
 }
 body{
-background:#fff
+background:#fff url(../images/bg-app.jpg) repeat center top;
 }
 .row{
 margin:0;
@@ -81,7 +81,7 @@ background:none;
   font-size: 13px;
   float: left;
   width: 100%;
-
+  padding: 0 15px;
 }
 .input-box a {
   float: left;
@@ -126,7 +126,7 @@ margin:0 23px 0 0 ;
 .not-key {
 float:left;
 width:100%;
-margin:120px 0 0 0;
+margin:40px 0 0 0;
 }
 .not-key p{
 float:left;
@@ -203,7 +203,7 @@ background:none;
   float: left;
   margin: 10px 0 0 10px;
   height: 39px;
-  width: 85%;
+  width: 80%;
 }
 
 .input-login a {
@@ -324,4 +324,12 @@ float:right;
 }
 .sun-icon{
 float:right !important;
+}
+.input-border-none div{
+border-bottom:0 !important;
+border-radius:0 !important
+}
+
+.input-border-none div.text-box-input{
+border-bottom:1px solid #000 !important
 }
