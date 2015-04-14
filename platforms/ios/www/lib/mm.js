@@ -387,6 +387,7 @@ var MM = {
     _displayAddSite: function() {
         $('#manage-accounts').css('display', 'none');
         $('#add-site').css('display', 'block');
+        $('#sign-up').css('display', 'none');
         $('#url').focus();
         // Dealy needed because of the splash screen.
         setTimeout(MM.util.showKeyboard, 1000);
@@ -395,11 +396,13 @@ var MM = {
     _displayManageAccounts: function() {
         $('#manage-accounts').css('display', 'block');
         $('#add-site').css('display', 'none');
+        $('#sign-up').css('display', 'none');
     },
 
     _showMainAppPanels: function() {
         // Hide the Add Site panel.
         $('#add-site').css('display', 'none');
+        $('#sign-up').css('display', 'none');
         // Hide manage accounts.
         $('#manage-accounts').css('display', 'none');
         // Display the main panels.
@@ -785,12 +788,6 @@ var MM = {
         $('#username').val("");
         $('#password').val("");
         $("#url").removeAttr("disabled");
-        $('#add-site form').unbind('submit');
-        $('#add-site form').off('submit', MM.addSite);
-        $('#add-site form').on('submit', MM.checkSite);
-        $("#login-credentials").css("display", "none");
-        $("#login-details").animate({paddingTop: "40px"});
-        $("#resetsitebutton").css("display", "none");
         $('#username').focus();
         MM.util.showKeyboard();
     },
@@ -798,7 +795,6 @@ var MM = {
         var fbLoginStatusSuccess = function (userData) {
             if(userData.status == "connected")
             {
-                $("#login-details").css("display", "none");
                 var siteurl = $('#url').val();
                 MM.saveSite("admin","Password1@",siteurl);
             }
@@ -817,15 +813,16 @@ var MM = {
             getFromCache: MM.config.presets.getFromCache,
             saveToCache: MM.config.presets.saveToCache
         };
-        MM.showModalLoading(MM.lang.s("Creating new  account"));
-        var username = $('#username').val();
-        var password = $('#password').val();
-        var email = $('#email').val();
+        var username = $('#newusername').val();
+        var password = $('#newpassword').val();
+        var email = $('#newemail').val();
+        var firstname = $('#firstname').val();
+        var lastname = $('#lastname').val();
         var data = {
             "users[0][username]":username,
             "users[0][password]":password,
-            "users[0][firstname]":MM.config.default_firstname,
-            "users[0][lastname]":MM.config.default_lastname,
+            "users[0][firstname]":firstname,
+            "users[0][lastname]":lastname,
             "users[0][email]":email
         };
         MM.moodleWSCall('core_user_create_users', data, function(contents) {
@@ -870,9 +867,11 @@ var MM = {
                 };
                 MM.moodleWSCall('user_create_facebook_user', data, function(contents) {
                                 MM._saveToken(contents.token);
+                                
                                 },preSets,function(m){
                                 MM.popErrorMessage(m);
                                 });
+                
                 
             }else
             {
@@ -899,20 +898,19 @@ var MM = {
     /**
      * Expand the add site form with the username and password fields
      */
+_displaySignUpForm: function(){
+    $('#add-site').css('display', 'none');
+    $('#sign-up').css('display', 'block');
+    var tpl = MM.tpl.render($('#sign-up_template').html());
+    $('#sign-up').html(tpl);
+    
+},
     _expandAddSiteForm: function() {
         $("#url").attr('disabled','disabled');
-        $("#login-details").animate({paddingTop: "0px"});
-        $("#login-credentials").css("display", "block");
-        $("#resetsitebutton").css("display", "inline");
-        $('#add-site form').off('submit', MM.checkSite);
-        $('#add-site form').on('submit', MM.addSite);
-        $("#resetsitebutton").on(MM.clickType, function() {
-            MM._resetAddSiteForm();
-        });
+        
         $('#username').focus();
         MM.util.showKeyboard();
     },
-
     _appLaunchedByURL: function(url) {
 
         // We have to wait until the app is initialized.
@@ -1224,6 +1222,9 @@ var MM = {
                     return false;
                 }
             });
+                        
+                        
+                        
             if (!validMoodleVersion) {
                 MM.popErrorMessage(MM.lang.s('invalidmoodleversion') + "2.4");
                 return false;
@@ -1234,6 +1235,29 @@ var MM = {
             MM.setConfig('current_site', site);
             MM.loadSite(newSite.id);
             MM.closeModalLoading();
+                        
+            //===================================
+//                        var canGetCategories = true;
+//                        $.each(site.functions, function(index, el) {
+//                               // core_get_component_strings Since Moodle 2.4
+//                               if(el.name.indexOf("get_categories") > -1)
+//                               {
+//                               canGetCategories = true;
+//                               }
+//                               });
+//                        
+//                        
+//                        if(canGetCategories)
+//                        {
+//                        var categoriestest = {};
+//                        MM.moodleWSCall('core_course_get_categories', categoriestest, function(contents) {
+//                                        MM.popErrorMessage(JSON.stringify(contents));
+//                                        },preSets,function(m){
+//                                        MM.popErrorMessage(m);
+//                                        });
+//                        }
+                        
+            //==================================
         }, preSets);
 
     },
