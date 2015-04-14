@@ -1695,6 +1695,7 @@ div.jqi button.jqidefaultbutton {
 }
 #add-site .row .form-email .button-footer div {
   height: 40px;
+  width: 50%;
   margin: 0;
   position: relative;
 }
