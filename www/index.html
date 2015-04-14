@@ -137,6 +137,9 @@
 <div id="manage-accounts" style="display: none">
 
 </div>
+<div id="sign-up" style="display: none">
+    
+</div>
 
 <div id="main-wrapper" style="display: none; background-color: white">
 
@@ -341,34 +344,9 @@
         </ul>
     </div>
 </script>
-
 <script type="text/template" id="add-site_template">
-<h1 class="app-ico">
-    <img src="img/login-logo.png" alt="Moodle">
-</h1>
-<form action="" novalidate>
-    <div id="login-details">
-        <p>
-            <input type="url" id="url" autocapitalize="off" autocorrect="off" placeholder="<%= MM.lang.s("siteurl") %>">
-        </p>
-        <div id="login-credentials">
-            <p>
-                <input type="text" id="username" autocapitalize="off" autocorrect="off" placeholder="<%= MM.lang.s("username") %>">
-            </p>
-            <p>
-                <input type="password" id="password" placeholder="<%= MM.lang.s("password") %>">
-            </p>
-        </div>
-        <p>
-            <input type="submit" name="add"   id="addsitebutton"   value="<%= MM.lang.s("add") %>">
-            <input type="button" name="reset" id="resetsitebutton" value="<%= MM.lang.s("reset") %>">
-        </p>
-    </div>
-</form>
-<div id= "helplogin">
-    <a href="#helpmelogin"><%= MM.lang.s("icantlogin") %></a>
-    <a href="#manage-accounts"><%= MM.lang.s("manageaccounts") %></a>
-</div>
+</script>
+<script type="text/template" id="sign-up_template">
 </script>
 
 <script type="text/template" id="manage-accounts_template">
