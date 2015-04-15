@@ -388,6 +388,7 @@ var MM = {
         $('#manage-accounts').css('display', 'none');
         $('#add-site').css('display', 'block');
         $('#sign-up').css('display', 'none');
+        $('#sign-up-by-key').css('display', 'none');
         $('#url').focus();
         // Dealy needed because of the splash screen.
         setTimeout(MM.util.showKeyboard, 1000);
@@ -397,12 +398,14 @@ var MM = {
         $('#manage-accounts').css('display', 'block');
         $('#add-site').css('display', 'none');
         $('#sign-up').css('display', 'none');
+        $('#sign-up-by-key').css('display', 'none');
     },
 
     _showMainAppPanels: function() {
         // Hide the Add Site panel.
         $('#add-site').css('display', 'none');
         $('#sign-up').css('display', 'none');
+        $('#sign-up-by-key').css('display', 'none');
         // Hide manage accounts.
         $('#manage-accounts').css('display', 'none');
         // Display the main panels.
@@ -901,9 +904,18 @@ var MM = {
 _displaySignUpForm: function(){
     $('#add-site').css('display', 'none');
     $('#sign-up').css('display', 'block');
+	$('#sign-up-by-key').css('display', 'none');
     var tpl = MM.tpl.render($('#sign-up_template').html());
     $('#sign-up').html(tpl);
     
+},
+
+_displaySignUpByEmailForm: function(){
+	$('#add-site').css('display', 'none');
+    $('#sign-up').css('display', 'none');
+    $('#sign-up-by-key').css('display', 'block');
+    var tpl = MM.tpl.render($('#sign-up-by-key_template').html());
+    $('#sign-up-by-key').html(tpl);
 },
     _expandAddSiteForm: function() {
         $("#url").attr('disabled','disabled');
