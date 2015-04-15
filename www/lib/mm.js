@@ -756,7 +756,7 @@ var MM = {
 
         MM.currentService = MM.config.wsservice;
         // Return default service.
-        return MM.config.wsservice;
+        return MM.config.wsextservice;
     },
 
     /**
@@ -1248,7 +1248,8 @@ _displaySignUpByEmailForm: function(){
             getFromCache: false,
             saveToCache: true
         };
-
+                                  
+                                  
         // We have a valid token, try to get the site info.
         MM.moodleWSCall('moodle_webservice_get_siteinfo', {}, function(site) {
             // Now we check for the minimum required version.
@@ -1275,34 +1276,28 @@ _displaySignUpByEmailForm: function(){
             MM.setConfig('current_site', site);
             MM.loadSite(newSite.id);
             MM.closeModalLoading();
-                        
-            //===================================
-//                        var canGetCategories = true;
-//                        $.each(site.functions, function(index, el) {
-//                               // core_get_component_strings Since Moodle 2.4
-//                               if(el.name.indexOf("get_categories") > -1)
-//                               {
-//                               canGetCategories = true;
-//                               }
-//                               });
-//                        
-//                        
-//                        if(canGetCategories)
-//                        {
-//                        var categoriestest = {};
-//                        MM.moodleWSCall('core_course_get_categories', categoriestest, function(contents) {
-//                                        MM.popErrorMessage(JSON.stringify(contents));
-//                                        },preSets,function(m){
-//                                        MM.popErrorMessage(m);
-//                                        });
-//                        }
-                        
-            //==================================
+            
         }, preSets);
 
     },
 
-
+     loadCourseCategories: function()
+     {
+           var preSets = {
+                wstoken: MM.config.current_token,
+                siteurl: MM.siteurl,
+                silently: true,
+                getFromCache: false,
+                saveToCache: true
+            };
+                                  
+            var categoriestest = {};
+            MM.moodleWSCall('core_course_get_categories', categoriestest, function(contents) {
+                 MM.popErrorMessage(JSON.stringify(contents));
+            },function(m){
+                 MM.popErrorMessage(m);
+            },preSets);
+     },
     /**
      * Saves a site in the database
      *
