@@ -828,6 +828,38 @@ var MM = {
             "users[0][lastname]":lastname,
             "users[0][email]":email
         };
+        
+        var stop = false;
+        var msg = '';
+	
+		// Detect right params 
+        if (!username) {
+            msg += "Vui lòng nhập username";
+            stop = true;
+        }
+        if (!password && !stop) {
+            msg += "Vui lòng nhập password";
+            stop = true;
+        }
+        if (!email  && !stop) {
+            msg += "Vui lòng nhập email";
+            stop = true;
+        }
+        if (!firstname  && !stop) {
+            msg += "Vui lòng nhập firstname";
+            stop = true;
+        }
+        if (!lastname  && !stop) {
+            msg += "Vui lòng nhập lastname";
+            stop = true;
+        }
+        
+
+        if (stop) {
+            MM.popErrorMessage(msg);
+            return;
+        }
+        
         MM.moodleWSCall('core_user_create_users', data, function(contents) {
                         // + JSON.stringify(contents)
                         
@@ -841,6 +873,7 @@ var MM = {
                         });
         
     },
+	
     _login: function() {
         var siteurl = $('#url').val();
         MM.saveSite($('#username'),$('#password '),MM.config.preSets.preSets.siteurl);
