@@ -388,6 +388,7 @@ var MM = {
         $('#manage-accounts').css('display', 'none');
         $('#add-site').css('display', 'block');
         $('#sign-up').css('display', 'none');
+        $('#sign-up-by-key').css('display', 'none');
         $('#url').focus();
         // Dealy needed because of the splash screen.
         setTimeout(MM.util.showKeyboard, 1000);
@@ -397,12 +398,14 @@ var MM = {
         $('#manage-accounts').css('display', 'block');
         $('#add-site').css('display', 'none');
         $('#sign-up').css('display', 'none');
+        $('#sign-up-by-key').css('display', 'none');
     },
 
     _showMainAppPanels: function() {
         // Hide the Add Site panel.
         $('#add-site').css('display', 'none');
         $('#sign-up').css('display', 'none');
+        $('#sign-up-by-key').css('display', 'none');
         // Hide manage accounts.
         $('#manage-accounts').css('display', 'none');
         // Display the main panels.
@@ -825,6 +828,33 @@ var MM = {
             "users[0][lastname]":lastname,
             "users[0][email]":email
         };
+        
+        var stop = false;
+        var msg = '';
+	
+		// Detect right params 
+        if (!username) {
+            msg += MM.lang.s("usernamerequired");
+            stop = true;
+        }
+        if (!password && !stop) {
+            msg += MM.lang.s("passwordrequired");
+            stop = true;
+        }
+        if (!email  && !stop) {
+            msg += MM.lang.s("emailrequired");
+            stop = true;
+        }
+        if ((!firstname || !lastname)  && !stop) {
+            msg += MM.lang.s("namerequired");
+            stop = true;
+        }
+
+        if (stop) {
+            MM.popErrorMessage(msg);
+            return;
+        }
+        MM.showModalLoading(MM.lang.s("signuplabel"));
         MM.moodleWSCall('core_user_create_users', data, function(contents) {
                         // + JSON.stringify(contents)
                         
@@ -838,6 +868,7 @@ var MM = {
                         });
         
     },
+	
     _login: function() {
         var siteurl = $('#url').val();
         MM.saveSite($('#username'),$('#password '),MM.config.preSets.preSets.siteurl);
@@ -901,9 +932,18 @@ var MM = {
 _displaySignUpForm: function(){
     $('#add-site').css('display', 'none');
     $('#sign-up').css('display', 'block');
+	$('#sign-up-by-key').css('display', 'none');
     var tpl = MM.tpl.render($('#sign-up_template').html());
     $('#sign-up').html(tpl);
     
+},
+
+_displaySignUpByEmailForm: function(){
+	$('#add-site').css('display', 'none');
+    $('#sign-up').css('display', 'none');
+    $('#sign-up-by-key').css('display', 'block');
+    var tpl = MM.tpl.render($('#sign-up-by-key_template').html());
+    $('#sign-up-by-key').html(tpl);
 },
     _expandAddSiteForm: function() {
         $("#url").attr('disabled','disabled');

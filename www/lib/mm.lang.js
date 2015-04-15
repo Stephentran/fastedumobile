@@ -130,8 +130,8 @@ MM.lang = {
     loadPluginLang: function(component, strings) {
         MM.log('Strings: Loading plugin lang ' + component);
         if (!MM.lang.current) {
-            MM.lang.current = 'en';
-            MM.lang.strings['en'] = [];
+            MM.lang.current = 'vi';
+            MM.lang.strings['vi'] = [];
         }
 
         // Try to find in cache the language strings.
@@ -143,8 +143,8 @@ MM.lang = {
         }
 
         MM.lang.strings[MM.lang.current][component] = strings;
-        if (MM.lang.current != 'en') {
-            MM.lang.strings['en'][component] = strings;
+        if (MM.lang.current != 'vi') {
+            MM.lang.strings['vi'][component] = strings;
         }
     },
 
@@ -178,10 +178,10 @@ MM.lang = {
             translated = MM.lang.strings[MM.lang.current][component][id];
         }
         // If not, we look for the string in the default language "english"
-        else if (typeof(MM.lang.strings['en']) != 'undefined' &&
-                typeof(MM.lang.strings['en'][component]) !== 'undefined' &&
-                typeof(MM.lang.strings['en'][component][id]) !== 'undefined') {
-            translated = MM.lang.strings['en'][component][id];
+        else if (typeof(MM.lang.strings['vi']) != 'undefined' &&
+                typeof(MM.lang.strings['vi'][component]) !== 'undefined' &&
+                typeof(MM.lang.strings['vi'][component][id]) !== 'undefined') {
+            translated = MM.lang.strings['vi'][component][id];
         }
 
         // If not found yet, we look for the string in the base language file (lang/en.json)

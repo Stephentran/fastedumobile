@@ -172,3 +172,59 @@ To disable web storage backup to iCloud, set the BackupWebStorage preference to 
 2015-04-10 01:11:02.170 FastEduMobile[51964:403254] [CDVTimer][TotalPluginStartup] 85.541010ms
 2015-04-10 01:11:02.229 FastEduMobile[51964:403254] Resetting plugins due to page load.
 2015-04-10 01:11:02.456 FastEduMobile[51964:403254] Finished load of: file:///Users/StephenTran/Library/Developer/CoreSimulator/Devices/FA375D21-F83E-411C-8F76-A816947265C1/data/Containers/Bundle/Application/2F9256FD-5570-4885-A943-25DD020EF874/FastEduMobile.app/www/index.html
+2015-04-15 22:33:12.168 FastEduMobile[4529:136154] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/HungLe/Library/Developer/CoreSimulator/Devices/7FA59089-FE0A-46FF-8704-E14FC948C49C/data/Containers/Data/Application/FCAA2D1F-D0EB-4C00-8813-8118BCB2AAEC/Library/Cookies/Cookies.binarycookies
+2015-04-15 22:33:13.648 FastEduMobile[4529:136154] Apache Cordova native platform version 3.8.0 is starting.
+2015-04-15 22:33:13.648 FastEduMobile[4529:136154] Multi-tasking -> Device: YES, App: YES
+2015-04-15 22:33:13.789 FastEduMobile[4529:136154] Unlimited access to network resources
+2015-04-15 22:33:13.848 FastEduMobile[4529:136154] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-04-15 22:33:16.721 FastEduMobile[4529:136154] Init FacebookConnect Session
+2015-04-15 22:33:16.775 FastEduMobile[4529:136154] [CDVTimer][facebookconnectplugin] 54.629982ms
+2015-04-15 22:33:17.905 FastEduMobile[4529:136154] [CDVTimer][splashscreen] 1129.287004ms
+2015-04-15 22:33:17.905 FastEduMobile[4529:136154] [CDVTimer][TotalPluginStartup] 1184.310019ms
+2015-04-15 22:33:21.805 FastEduMobile[4529:136154] Resetting plugins due to page load.
+2015-04-15 22:33:27.091 FastEduMobile[4529:136154] THREAD WARNING: ['Globalization'] took '41.842041' ms. Plugin should use a background thread.
+2015-04-15 22:33:27.347 FastEduMobile[4529:136154] Finished load of: file:///Users/HungLe/Library/Developer/CoreSimulator/Devices/7FA59089-FE0A-46FF-8704-E14FC948C49C/data/Containers/Bundle/Application/905BDAC7-2E2D-4607-AFF7-56B379A3F2FA/FastEduMobile.app/www/index.html
+2015-04-15 22:34:04.739 FastEduMobile[4529:136154] THREAD WARNING: ['FacebookConnectPlugin'] took '24.737305' ms. Plugin should use a background thread.
+2015-04-15 23:10:14.335 FastEduMobile[5190:148538] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/HungLe/Library/Developer/CoreSimulator/Devices/7FA59089-FE0A-46FF-8704-E14FC948C49C/data/Containers/Data/Application/6F2C1471-0622-4CE1-B785-C653E4452F25/Library/Cookies/Cookies.binarycookies
+2015-04-15 23:10:14.846 FastEduMobile[5190:148538] Apache Cordova native platform version 3.8.0 is starting.
+2015-04-15 23:10:14.846 FastEduMobile[5190:148538] Multi-tasking -> Device: YES, App: YES
+2015-04-15 23:10:14.852 FastEduMobile[5190:148538] Unlimited access to network resources
+2015-04-15 23:10:14.867 FastEduMobile[5190:148538] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-04-15 23:10:15.020 FastEduMobile[5190:148538] Init FacebookConnect Session
+2015-04-15 23:10:15.106 FastEduMobile[5190:148538] [CDVTimer][facebookconnectplugin] 86.241007ms
+2015-04-15 23:10:15.272 FastEduMobile[5190:148538] [CDVTimer][splashscreen] 165.300965ms
+2015-04-15 23:10:15.272 FastEduMobile[5190:148538] [CDVTimer][TotalPluginStartup] 251.931012ms
+2015-04-15 23:10:15.709 FastEduMobile[5190:148538] Resetting plugins due to page load.
+2015-04-15 23:10:16.380 FastEduMobile[5190:148538] Finished load of: file:///Users/HungLe/Library/Developer/CoreSimulator/Devices/7FA59089-FE0A-46FF-8704-E14FC948C49C/data/Containers/Bundle/Application/AE7F8261-8099-45CD-B82D-FE3126FE7D58/FastEduMobile.app/www/index.html
+2015-04-15 23:19:59.498 FastEduMobile[5720:152055] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/HungLe/Library/Developer/CoreSimulator/Devices/7FA59089-FE0A-46FF-8704-E14FC948C49C/data/Containers/Data/Application/4002AE15-8FC2-488D-91ED-3B22EB1A4C41/Library/Cookies/Cookies.binarycookies
+2015-04-15 23:19:59.738 FastEduMobile[5720:152055] Apache Cordova native platform version 3.8.0 is starting.
+2015-04-15 23:19:59.738 FastEduMobile[5720:152055] Multi-tasking -> Device: YES, App: YES
+2015-04-15 23:19:59.750 FastEduMobile[5720:152055] Unlimited access to network resources
+2015-04-15 23:19:59.761 FastEduMobile[5720:152055] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-04-15 23:19:59.905 FastEduMobile[5720:152055] Init FacebookConnect Session
+2015-04-15 23:19:59.908 FastEduMobile[5720:152055] [CDVTimer][facebookconnectplugin] 3.259003ms
+2015-04-15 23:19:59.986 FastEduMobile[5720:152055] [CDVTimer][splashscreen] 78.184962ms
+2015-04-15 23:19:59.986 FastEduMobile[5720:152055] [CDVTimer][TotalPluginStartup] 81.773043ms
+2015-04-15 23:20:00.283 FastEduMobile[5720:152055] Resetting plugins due to page load.
+2015-04-15 23:20:00.796 FastEduMobile[5720:152055] Finished load of: file:///Users/HungLe/Library/Developer/CoreSimulator/Devices/7FA59089-FE0A-46FF-8704-E14FC948C49C/data/Containers/Bundle/Application/E7065336-AADB-46D9-BA86-3EEFC776F999/FastEduMobile.app/www/index.html
