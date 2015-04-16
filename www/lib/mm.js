@@ -930,6 +930,7 @@ var MM = {
      * Expand the add site form with the username and password fields
      */
 _displaySignUpForm: function(){
+    alert("hello");
     $('#add-site').css('display', 'none');
     $('#sign-up').css('display', 'block');
 	$('#sign-up-by-key').css('display', 'none');
@@ -937,7 +938,15 @@ _displaySignUpForm: function(){
     $('#sign-up').html(tpl);
     
 },
-
+demoVimeo: function()
+    {
+        $('#add-site').css('display', 'none');
+        $('#sign-up').css('display', 'none');
+        $('#sign-up-by-key').css('display', 'none');
+        $('#vimeo-demo').css('display', 'block');
+        var tpl = MM.tpl.render($('#vimeo-demo_template').html());
+        $('#vimeo-demo').html(tpl);
+    },
 _displaySignUpByEmailForm: function(){
 	$('#add-site').css('display', 'none');
     $('#sign-up').css('display', 'none');
@@ -1280,7 +1289,7 @@ _displaySignUpByEmailForm: function(){
         }, preSets);
 
     },
-
+     
      loadCourseCategories: function()
      {
            var preSets = {

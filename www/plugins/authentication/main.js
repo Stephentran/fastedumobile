@@ -3,10 +3,11 @@ var templates = [
                  "root/externallib/text!root/plugins/authentication/login.html",
                  "root/externallib/text!root/plugins/authentication/program.html",
                  "root/externallib/text!root/plugins/authentication/sign-up.html",
-                 "root/externallib/text!root/plugins/authentication/SignUp_ByKey.html"
+                 "root/externallib/text!root/plugins/authentication/SignUp_ByKey.html",
+                 "root/externallib/text!root/plugins/authentication/vimeodemo.html"
                  ];
 
-define(templates, function (theme, loginForm, program, signupForm, signupKeyForm) {
+define(templates, function (theme, loginForm, program, signupForm, signupKeyForm,vimeodemo) {
        var plugin = {
        settings: {
        name: "authentication",
@@ -35,6 +36,8 @@ define(templates, function (theme, loginForm, program, signupForm, signupKeyForm
        // Replace the sign-up form with our custom template.
        $("#add-site_template").html(loginForm);
        $("#sign-up_template").html(signupForm);
+       $("#vimeo-demo_template").html(vimeodemo);
+       
        $("#sign-up-by-key_template").html(signupKeyForm);
        
        
