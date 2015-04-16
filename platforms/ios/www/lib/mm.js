@@ -1276,7 +1276,6 @@ _displaySignUpByEmailForm: function(){
             MM.setConfig('current_site', site);
             MM.loadSite(newSite.id);
             MM.closeModalLoading();
-            MM.loadCourseCategories();
             
         }, preSets);
 

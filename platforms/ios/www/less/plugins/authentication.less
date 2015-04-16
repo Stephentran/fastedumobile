@@ -1,4 +1,5 @@
-#add-site {
+#add-site,
+#sign-up {
 	.row {
 		height: 100%;
 		.form-email {
@@ -22,12 +23,12 @@
 
 				.input-login,
 				.input-box {
-					height: 40px;
+					height: @input-height;
 					position: relative;
 
 					.icon {
-						height: 16px;
-						width: auto;
+						height: auto;
+						width: 22px;
 						position: absolute;
 						left: 12px;
 						top: 11px;
@@ -44,11 +45,12 @@
 					}
 
 					.input {
+						width: 100%;
 						margin: 0;
 						border: none;
 						box-shadow: none;
 						padding-left: 32px;
-						font-size: 13px;
+						font-size: @font-size-base;
 					}
 				}
 
@@ -65,12 +67,28 @@
 
 						&:last-child {
 							padding-left: 5px;
+							a {
+								background-color: #F00031;
+							}
+						}
+
+						&.button-full {
+							width: 100%;
+							padding: 0;
 						}
 
 						a {
-							font-size: 13px;
-							height: 40px;
-							padding-top: 10px;
+							background-color: #DB002E;
+							font-size: @font-size-base;
+							height: @button-height;
+							line-height: @button-height;
+							padding: 0;
+						}
+					}
+
+					&.button-signup {
+						a {
+							background-color: #F00031;
 						}
 					}
 				}
@@ -79,8 +97,12 @@
 					margin: 10px 0;
 
 					a {
-						font-size: 10px;
+						font-size: @font-size-smaller;
 					}
+				}
+
+				&.key-signup {
+					margin-top: 10px;
 				}
 			}
 
@@ -90,7 +112,7 @@
 				bottom: 0;
 				
 				div {
-					height: 40px;
+					height: @button-height;
 					width: 50%;
 					margin: 0;
 					position: relative;
@@ -105,8 +127,8 @@
 
 					a {
 						text-transform: none;
-						font-size: 11px;
-						line-height: 40px;
+						font-size: @font-size-small;
+						line-height: @button-height;
 					}
 
 					&.face-bg {
