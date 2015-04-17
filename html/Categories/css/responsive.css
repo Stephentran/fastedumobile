@@ -1,0 +1,155 @@
+/*-- css PC--*/
+@media (max-width: 580px) {
+.pass-li input{
+width:70%
+}
+}
+@media (max-width: 393px) {
+.pass-li input{
+width:65%
+}
+.bottom-key p {
+  font-size: 18px;
+ }
+}
+@media (max-width: 340px) {
+.pass-li input{
+width:60%
+}
+}
+@media (max-width: 426px) {
+.input-login input{
+width:80%
+}
+}
+@media (max-width: 326px) {
+.input-login input{
+width:77%
+}
+}
+@media (max-width: 368px) {
+.form-email img{
+max-width:100%;
+}
+}
+@media (max-width: 390px) {
+.fe-bg a, .face-bg a{
+font-size:15px;
+}
+}
+@media (max-width: 494px) {
+.fe-bg img, .face-bg img{
+display:none;
+}
+}
+
+
+@media (max-width: 480x) {
+.input-login input{
+font-size:13px !important;
+}
+}
+
+@media (max-width: 525px) {
+.not-key p {
+  font-size: 18px;
+}
+}
+@media (max-width: 450px) {
+.not-key p {
+  font-size: 16px;
+}
+}
+@media (max-width: 411px) {
+.not-key img {
+  width: 33px;
+ }
+}
+@media (max-width: 411px) {
+.not-key p {
+  font-size: 14px;
+  font-weight:bold
+}
+}
+@media (max-width: 411px) {
+.not-key p {
+  font-size: 14px;
+  font-weight:bold
+}
+}
+@media (max-width: 611px) {
+.input-login input {
+  width: 70%;
+}
+}
+@media (max-width: 422px) {
+.input-login input {
+  width: 65%;
+}
+}
+@media (max-width: 369px) {
+.input-login img.sun-icon {
+ display:none
+}
+}
+@media (max-width: 370px) {
+.not-key p {
+  font-size: 14px;
+  font-weight:bold
+}
+.not-key img{
+display:none
+}
+.not-key p{
+float:none;
+}
+}
+@media (max-width: 412px) {
+.input-border-none div{
+  width: 100%;
+  padding:0;
+}
+}
+@media (max-width: 425px) {
+.pass-li input{
+  width: 60%;
+  font-size: 18px;
+}
+}
+@media (max-width: 388px) {
+.form-email img.sun-icon{
+display:none
+}
+.button-login div{
+width:100%;
+padding:0;
+}
+}
+@media (max-width: 360px) {
+.fe-bg , .face-bg {width:100%;
+margin:3px 0
+}
+}
+
+
+@media (max-width:630px) {
+.content-slidermenu ul li p {
+  width: 79%;
+}
+}
+
+@media (max-width:530px) {
+.content-slidermenu ul li p {
+  width: 74%;
+}
+}
+@media (max-width:430px) {
+.content-slidermenu ul li p {
+  width: 69%;
+}
+}
+@media (max-width:364px) {
+.content-slidermenu ul li p {
+  width: 64%;
+}
+}
