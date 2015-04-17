@@ -1,3 +1,4 @@
+/* Source style */
 body {
   margin: 0;
   padding: 0;
@@ -132,7 +133,7 @@ body {
   font-size: 14px;
   font-size: .875rem;
   line-height: 24px;
-  background: #fa8f1c url(../img/bg-orange.png);
+  background: #ffffff url("../images/bg-app.jpg");
 }
 /* =1.3 - Links
 --------------------------------------------------------*/
@@ -573,7 +574,7 @@ hr {
   line-height: 44px;
   padding-right: 20px;
   overflow: hidden;
-  background: #fa8f1c;
+  background: #ffffff;
   border-bottom: 0;
 }
 .header-main .nav-main {
@@ -623,13 +624,13 @@ hr {
 /* - User menu on the left panel
 -------------------------------------------------------------------------- */
 .user-menu {
-  background: #fa8f1c;
+  background: #ffffff;
   padding-bottom: 40px;
   height: auto;
 }
 .user-menu header {
   padding: 10px;
-  background: #fa8f1c;
+  background: #ffffff;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   box-shadow: none;
 }
@@ -1320,7 +1321,7 @@ hr {
   letter-spacing: .5px;
   text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
   padding: 10px;
-  background-color: #fa8f1c;
+  background-color: #ffffff;
   -webkit-border-radius: 10px 10px 0 0;
   -moz-border-radius: 10px 10px 0 0;
   border-radius: 10px 10px 0 0;
@@ -1609,117 +1610,185 @@ div.jqi button.jqidefaultbutton {
 .user-grade .leveleven {
   background-color: #fff;
 }
+/* Variables */
+/* Urls 
+--------------------------------------------------------*/
+/* Font
+--------------------------------------------------------*/
+@font-face {
+  font-family: "UTM Avo";
+  src: url("../fonts/UTM Avo.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+/* Base style */
+html * {
+  font-family: "UTM Avo", sans-serif;
+}
+/* General style */
 #add-site {
   padding: 0;
   margin: 0;
   width: 100%;
 }
-#add-site .row {
+/* Plugins style */
+#add-site .row,
+#sign-up .row {
   height: 100%;
 }
-#add-site .row .form-email {
+#add-site .row .form-email,
+#sign-up .row .form-email {
   height: 100%;
 }
-#add-site .row .form-email .logo-top {
+#add-site .row .form-email .logo-top,
+#sign-up .row .form-email .logo-top {
   height: 36px;
   margin: 23px 0;
 }
-#add-site .row .form-email .logo-middle {
+#add-site .row .form-email .logo-middle,
+#sign-up .row .form-email .logo-middle {
   height: 96px;
 }
-#add-site .row .form-email .maps-app {
+#add-site .row .form-email .maps-app,
+#sign-up .row .form-email .maps-app {
   background-size: contain;
 }
-#add-site .row .form-email .key-login {
+#add-site .row .form-email .key-login,
+#sign-up .row .form-email .key-login {
   padding: 0 24px;
 }
 #add-site .row .form-email .key-login .input-login,
-#add-site .row .form-email .key-login .input-box {
+#sign-up .row .form-email .key-login .input-login,
+#add-site .row .form-email .key-login .input-box,
+#sign-up .row .form-email .key-login .input-box {
   height: 40px;
   position: relative;
 }
 #add-site .row .form-email .key-login .input-login .icon,
-#add-site .row .form-email .key-login .input-box .icon {
-  height: 16px;
-  width: auto;
+#sign-up .row .form-email .key-login .input-login .icon,
+#add-site .row .form-email .key-login .input-box .icon,
+#sign-up .row .form-email .key-login .input-box .icon {
+  height: auto;
+  width: 22px;
   position: absolute;
   left: 12px;
   top: 11px;
   margin: 0;
 }
 #add-site .row .form-email .key-login .input-login .icon.icon-key,
-#add-site .row .form-email .key-login .input-box .icon.icon-key {
+#sign-up .row .form-email .key-login .input-login .icon.icon-key,
+#add-site .row .form-email .key-login .input-box .icon.icon-key,
+#sign-up .row .form-email .key-login .input-box .icon.icon-key {
   height: 14px;
 }
 #add-site .row .form-email .key-login .input-login .icon.sun-icon,
-#add-site .row .form-email .key-login .input-box .icon.sun-icon {
+#sign-up .row .form-email .key-login .input-login .icon.sun-icon,
+#add-site .row .form-email .key-login .input-box .icon.sun-icon,
+#sign-up .row .form-email .key-login .input-box .icon.sun-icon {
   left: auto;
   right: 12px;
 }
 #add-site .row .form-email .key-login .input-login .input,
-#add-site .row .form-email .key-login .input-box .input {
+#sign-up .row .form-email .key-login .input-login .input,
+#add-site .row .form-email .key-login .input-box .input,
+#sign-up .row .form-email .key-login .input-box .input {
+  width: 100%;
   margin: 0;
   border: none;
   box-shadow: none;
   padding-left: 32px;
-  font-size: 13px;
+  font-size: 12px;
 }
-#add-site .row .form-email .key-login .button-login {
+#add-site .row .form-email .key-login .button-login,
+#sign-up .row .form-email .key-login .button-login {
   margin-top: 15px;
 }
-#add-site .row .form-email .key-login .button-login div {
+#add-site .row .form-email .key-login .button-login div,
+#sign-up .row .form-email .key-login .button-login div {
   width: 50%;
   margin: 0;
 }
-#add-site .row .form-email .key-login .button-login div:first-child {
+#add-site .row .form-email .key-login .button-login div:first-child,
+#sign-up .row .form-email .key-login .button-login div:first-child {
   padding-right: 5px;
 }
-#add-site .row .form-email .key-login .button-login div:last-child {
+#add-site .row .form-email .key-login .button-login div:last-child,
+#sign-up .row .form-email .key-login .button-login div:last-child {
   padding-left: 5px;
 }
-#add-site .row .form-email .key-login .button-login div a {
-  font-size: 13px;
-  height: 40px;
-  padding-top: 10px;
+#add-site .row .form-email .key-login .button-login div:last-child a,
+#sign-up .row .form-email .key-login .button-login div:last-child a {
+  background-color: #F00031;
 }
-#add-site .row .form-email .key-login .pass-req {
+#add-site .row .form-email .key-login .button-login div.button-full,
+#sign-up .row .form-email .key-login .button-login div.button-full {
+  width: 100%;
+  padding: 0;
+}
+#add-site .row .form-email .key-login .button-login div a,
+#sign-up .row .form-email .key-login .button-login div a {
+  background-color: #DB002E;
+  font-size: 12px;
+  height: 40px;
+  line-height: 40px;
+  padding: 0;
+}
+#add-site .row .form-email .key-login .button-login.button-signup a,
+#sign-up .row .form-email .key-login .button-login.button-signup a {
+  background-color: #F00031;
+}
+#add-site .row .form-email .key-login .pass-req,
+#sign-up .row .form-email .key-login .pass-req {
   margin: 10px 0;
 }
-#add-site .row .form-email .key-login .pass-req a {
+#add-site .row .form-email .key-login .pass-req a,
+#sign-up .row .form-email .key-login .pass-req a {
   font-size: 10px;
 }
-#add-site .row .form-email .button-footer {
+#add-site .row .form-email .key-login.key-signup,
+#sign-up .row .form-email .key-login.key-signup {
+  margin-top: 10px;
+}
+#add-site .row .form-email .button-footer,
+#sign-up .row .form-email .button-footer {
   margin: 0;
   position: fixed;
   bottom: 0;
 }
-#add-site .row .form-email .button-footer div {
+#add-site .row .form-email .button-footer div,
+#sign-up .row .form-email .button-footer div {
   height: 40px;
   width: 50%;
   margin: 0;
   position: relative;
 }
-#add-site .row .form-email .button-footer div img {
+#add-site .row .form-email .button-footer div img,
+#sign-up .row .form-email .button-footer div img {
   height: 22px;
   position: absolute;
   top: 8px;
   margin: 0;
   display: block;
 }
-#add-site .row .form-email .button-footer div a {
+#add-site .row .form-email .button-footer div a,
+#sign-up .row .form-email .button-footer div a {
   text-transform: none;
   font-size: 11px;
   line-height: 40px;
 }
-#add-site .row .form-email .button-footer div.face-bg {
+#add-site .row .form-email .button-footer div.face-bg,
+#sign-up .row .form-email .button-footer div.face-bg {
   padding-left: 25px;
 }
-#add-site .row .form-email .button-footer div.face-bg img {
+#add-site .row .form-email .button-footer div.face-bg img,
+#sign-up .row .form-email .button-footer div.face-bg img {
   left: 20px;
 }
-#add-site .row .form-email .button-footer div.fe-bg {
+#add-site .row .form-email .button-footer div.fe-bg,
+#sign-up .row .form-email .button-footer div.fe-bg {
   padding-left: 35px;
 }
-#add-site .row .form-email .button-footer div.fe-bg img {
+#add-site .row .form-email .button-footer div.fe-bg img,
+#sign-up .row .form-email .button-footer div.fe-bg img {
   left: 14px;
 }
