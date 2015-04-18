@@ -1668,7 +1668,7 @@ a {
 #add-site .form-email .maps-app,
 .sign-up-holder .form-email .maps-app,
 .sign-up-by-key-holder .form-email .maps-app {
-  background-size: contain;
+  background-size: 320px;
 }
 #add-site .form-email .key-login,
 .sign-up-holder .form-email .key-login,
@@ -1764,6 +1764,8 @@ a {
   height: 40px;
   line-height: 40px;
   padding: 0;
+  width: 100%;
+  border-radius: 4px;
 }
 #add-site .form-email .key-login .button-login div.button-first,
 .sign-up-holder .form-email .key-login .button-login div.button-first,
