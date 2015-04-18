@@ -133,7 +133,7 @@ body {
   font-size: 14px;
   font-size: .875rem;
   line-height: 24px;
-  background: #ffffff url("../images/bg-app.jpg");
+  background: #ffffff;
 }
 /* =1.3 - Links
 --------------------------------------------------------*/
@@ -1625,6 +1625,9 @@ div.jqi button.jqidefaultbutton {
 html * {
   font-family: "UTM Avo", sans-serif;
 }
+a {
+  color: #275270;
+}
 /* General style */
 #add-site {
   padding: 0;
@@ -1632,42 +1635,78 @@ html * {
   width: 100%;
 }
 /* Plugins style */
-#add-site .row,
-#sign-up .row {
+#add-site,
+.sign-up-holder,
+.sign-up-by-key-holder {
   height: 100%;
 }
-#add-site .row .form-email,
-#sign-up .row .form-email {
+#add-site .form-email,
+.sign-up-holder .form-email,
+.sign-up-by-key-holder .form-email {
   height: 100%;
+  background: #FFFFFF;
 }
-#add-site .row .form-email .logo-top,
-#sign-up .row .form-email .logo-top {
-  height: 36px;
-  margin: 23px 0;
+#add-site .form-email .logo-top,
+.sign-up-holder .form-email .logo-top,
+.sign-up-by-key-holder .form-email .logo-top {
+  height: 50px;
+  margin: 0;
+  margin-top: 14px;
 }
-#add-site .row .form-email .logo-middle,
-#sign-up .row .form-email .logo-middle {
+#add-site .form-email .slider-img,
+.sign-up-holder .form-email .slider-img,
+.sign-up-by-key-holder .form-email .slider-img {
+  margin-bottom: 50px;
+  margin-top: 42px;
+}
+#add-site .form-email .slider-img .logo-middle,
+.sign-up-holder .form-email .slider-img .logo-middle,
+.sign-up-by-key-holder .form-email .slider-img .logo-middle {
   height: 96px;
+  margin: 0;
 }
-#add-site .row .form-email .maps-app,
-#sign-up .row .form-email .maps-app {
+#add-site .form-email .maps-app,
+.sign-up-holder .form-email .maps-app,
+.sign-up-by-key-holder .form-email .maps-app {
   background-size: contain;
 }
-#add-site .row .form-email .key-login,
-#sign-up .row .form-email .key-login {
+#add-site .form-email .key-login,
+.sign-up-holder .form-email .key-login,
+.sign-up-by-key-holder .form-email .key-login {
   padding: 0 24px;
+  margin: 0;
 }
-#add-site .row .form-email .key-login .input-login,
-#sign-up .row .form-email .key-login .input-login,
-#add-site .row .form-email .key-login .input-box,
-#sign-up .row .form-email .key-login .input-box {
+#add-site .form-email .key-login .input-login,
+.sign-up-holder .form-email .key-login .input-login,
+.sign-up-by-key-holder .form-email .key-login .input-login,
+#add-site .form-email .key-login .input-box,
+.sign-up-holder .form-email .key-login .input-box,
+.sign-up-by-key-holder .form-email .key-login .input-box {
   height: 40px;
   position: relative;
 }
-#add-site .row .form-email .key-login .input-login .icon,
-#sign-up .row .form-email .key-login .input-login .icon,
-#add-site .row .form-email .key-login .input-box .icon,
-#sign-up .row .form-email .key-login .input-box .icon {
+#add-site .form-email .key-login .input-login.input-first,
+.sign-up-holder .form-email .key-login .input-login.input-first,
+.sign-up-by-key-holder .form-email .key-login .input-login.input-first,
+#add-site .form-email .key-login .input-box.input-first,
+.sign-up-holder .form-email .key-login .input-box.input-first,
+.sign-up-by-key-holder .form-email .key-login .input-box.input-first {
+  border-radius: 4px 4px 0 0 !important;
+}
+#add-site .form-email .key-login .input-login.input-last,
+.sign-up-holder .form-email .key-login .input-login.input-last,
+.sign-up-by-key-holder .form-email .key-login .input-login.input-last,
+#add-site .form-email .key-login .input-box.input-last,
+.sign-up-holder .form-email .key-login .input-box.input-last,
+.sign-up-by-key-holder .form-email .key-login .input-box.input-last {
+  border-radius: 0 0 4px 4px !important;
+}
+#add-site .form-email .key-login .input-login .icon,
+.sign-up-holder .form-email .key-login .input-login .icon,
+.sign-up-by-key-holder .form-email .key-login .input-login .icon,
+#add-site .form-email .key-login .input-box .icon,
+.sign-up-holder .form-email .key-login .input-box .icon,
+.sign-up-by-key-holder .form-email .key-login .input-box .icon {
   height: auto;
   width: 22px;
   position: absolute;
@@ -1675,23 +1714,29 @@ html * {
   top: 11px;
   margin: 0;
 }
-#add-site .row .form-email .key-login .input-login .icon.icon-key,
-#sign-up .row .form-email .key-login .input-login .icon.icon-key,
-#add-site .row .form-email .key-login .input-box .icon.icon-key,
-#sign-up .row .form-email .key-login .input-box .icon.icon-key {
+#add-site .form-email .key-login .input-login .icon.icon-key,
+.sign-up-holder .form-email .key-login .input-login .icon.icon-key,
+.sign-up-by-key-holder .form-email .key-login .input-login .icon.icon-key,
+#add-site .form-email .key-login .input-box .icon.icon-key,
+.sign-up-holder .form-email .key-login .input-box .icon.icon-key,
+.sign-up-by-key-holder .form-email .key-login .input-box .icon.icon-key {
   height: 14px;
 }
-#add-site .row .form-email .key-login .input-login .icon.sun-icon,
-#sign-up .row .form-email .key-login .input-login .icon.sun-icon,
-#add-site .row .form-email .key-login .input-box .icon.sun-icon,
-#sign-up .row .form-email .key-login .input-box .icon.sun-icon {
+#add-site .form-email .key-login .input-login .icon.sun-icon,
+.sign-up-holder .form-email .key-login .input-login .icon.sun-icon,
+.sign-up-by-key-holder .form-email .key-login .input-login .icon.sun-icon,
+#add-site .form-email .key-login .input-box .icon.sun-icon,
+.sign-up-holder .form-email .key-login .input-box .icon.sun-icon,
+.sign-up-by-key-holder .form-email .key-login .input-box .icon.sun-icon {
   left: auto;
   right: 12px;
 }
-#add-site .row .form-email .key-login .input-login .input,
-#sign-up .row .form-email .key-login .input-login .input,
-#add-site .row .form-email .key-login .input-box .input,
-#sign-up .row .form-email .key-login .input-box .input {
+#add-site .form-email .key-login .input-login .input,
+.sign-up-holder .form-email .key-login .input-login .input,
+.sign-up-by-key-holder .form-email .key-login .input-login .input,
+#add-site .form-email .key-login .input-box .input,
+.sign-up-holder .form-email .key-login .input-box .input,
+.sign-up-by-key-holder .form-email .key-login .input-box .input {
   width: 100%;
   margin: 0;
   border: none;
@@ -1699,96 +1744,125 @@ html * {
   padding-left: 32px;
   font-size: 12px;
 }
-#add-site .row .form-email .key-login .button-login,
-#sign-up .row .form-email .key-login .button-login {
+#add-site .form-email .key-login .button-login,
+.sign-up-holder .form-email .key-login .button-login,
+.sign-up-by-key-holder .form-email .key-login .button-login {
+  margin: 0;
   margin-top: 15px;
 }
-#add-site .row .form-email .key-login .button-login div,
-#sign-up .row .form-email .key-login .button-login div {
+#add-site .form-email .key-login .button-login div,
+.sign-up-holder .form-email .key-login .button-login div,
+.sign-up-by-key-holder .form-email .key-login .button-login div {
   width: 50%;
   margin: 0;
 }
-#add-site .row .form-email .key-login .button-login div:first-child,
-#sign-up .row .form-email .key-login .button-login div:first-child {
-  padding-right: 5px;
-}
-#add-site .row .form-email .key-login .button-login div:last-child,
-#sign-up .row .form-email .key-login .button-login div:last-child {
-  padding-left: 5px;
-}
-#add-site .row .form-email .key-login .button-login div:last-child a,
-#sign-up .row .form-email .key-login .button-login div:last-child a {
-  background-color: #F00031;
-}
-#add-site .row .form-email .key-login .button-login div.button-full,
-#sign-up .row .form-email .key-login .button-login div.button-full {
-  width: 100%;
-  padding: 0;
-}
-#add-site .row .form-email .key-login .button-login div a,
-#sign-up .row .form-email .key-login .button-login div a {
-  background-color: #DB002E;
+#add-site .form-email .key-login .button-login div a,
+.sign-up-holder .form-email .key-login .button-login div a,
+.sign-up-by-key-holder .form-email .key-login .button-login div a {
+  background-color: #E9A700;
   font-size: 12px;
   height: 40px;
   line-height: 40px;
   padding: 0;
 }
-#add-site .row .form-email .key-login .button-login.button-signup a,
-#sign-up .row .form-email .key-login .button-login.button-signup a {
-  background-color: #F00031;
+#add-site .form-email .key-login .button-login div.button-first,
+.sign-up-holder .form-email .key-login .button-login div.button-first,
+.sign-up-by-key-holder .form-email .key-login .button-login div.button-first {
+  padding-left: 0;
+  padding-right: 5px;
 }
-#add-site .row .form-email .key-login .pass-req,
-#sign-up .row .form-email .key-login .pass-req {
-  margin: 10px 0;
+#add-site .form-email .key-login .button-login div.button-last,
+.sign-up-holder .form-email .key-login .button-login div.button-last,
+.sign-up-by-key-holder .form-email .key-login .button-login div.button-last {
+  padding-right: 0;
+  padding-left: 5px;
 }
-#add-site .row .form-email .key-login .pass-req a,
-#sign-up .row .form-email .key-login .pass-req a {
+#add-site .form-email .key-login .button-login div.button-full,
+.sign-up-holder .form-email .key-login .button-login div.button-full,
+.sign-up-by-key-holder .form-email .key-login .button-login div.button-full {
+  width: 100%;
+  padding: 0;
+}
+#add-site .form-email .key-login .button-login div.button-signup a,
+.sign-up-holder .form-email .key-login .button-login div.button-signup a,
+.sign-up-by-key-holder .form-email .key-login .button-login div.button-signup a {
+  background-color: #00B0B0;
+}
+#add-site .form-email .key-login .button-login div.button-signup-facebook a,
+.sign-up-holder .form-email .key-login .button-login div.button-signup-facebook a,
+.sign-up-by-key-holder .form-email .key-login .button-login div.button-signup-facebook a {
+  background-color: #45449A;
+}
+#add-site .form-email .key-login .pass-req,
+.sign-up-holder .form-email .key-login .pass-req,
+.sign-up-by-key-holder .form-email .key-login .pass-req {
+  margin: 0;
+  margin-top: 12px;
+  text-decoration: initial;
+}
+#add-site .form-email .key-login .pass-req a,
+.sign-up-holder .form-email .key-login .pass-req a,
+.sign-up-by-key-holder .form-email .key-login .pass-req a {
   font-size: 10px;
+  color: #275270;
 }
-#add-site .row .form-email .key-login.key-signup,
-#sign-up .row .form-email .key-login.key-signup {
-  margin-top: 10px;
+#add-site .form-email .key-login.key-signup,
+.sign-up-holder .form-email .key-login.key-signup,
+.sign-up-by-key-holder .form-email .key-login.key-signup {
+  margin-top: 30px;
 }
-#add-site .row .form-email .button-footer,
-#sign-up .row .form-email .button-footer {
+#add-site .form-email .button-footer,
+.sign-up-holder .form-email .button-footer,
+.sign-up-by-key-holder .form-email .button-footer {
   margin: 0;
   position: fixed;
   bottom: 0;
+  background-color: #275270;
 }
-#add-site .row .form-email .button-footer div,
-#sign-up .row .form-email .button-footer div {
+#add-site .form-email .button-footer div,
+.sign-up-holder .form-email .button-footer div,
+.sign-up-by-key-holder .form-email .button-footer div {
   height: 40px;
   width: 50%;
   margin: 0;
   position: relative;
 }
-#add-site .row .form-email .button-footer div img,
-#sign-up .row .form-email .button-footer div img {
+#add-site .form-email .button-footer div img,
+.sign-up-holder .form-email .button-footer div img,
+.sign-up-by-key-holder .form-email .button-footer div img {
   height: 22px;
   position: absolute;
   top: 8px;
   margin: 0;
   display: block;
 }
-#add-site .row .form-email .button-footer div a,
-#sign-up .row .form-email .button-footer div a {
+#add-site .form-email .button-footer div a,
+.sign-up-holder .form-email .button-footer div a,
+.sign-up-by-key-holder .form-email .button-footer div a {
   text-transform: none;
-  font-size: 11px;
+  font-size: 12px;
   line-height: 40px;
+  color: #6695B5;
 }
-#add-site .row .form-email .button-footer div.face-bg,
-#sign-up .row .form-email .button-footer div.face-bg {
-  padding-left: 25px;
+#add-site .form-email .button-footer div.face-bg,
+.sign-up-holder .form-email .button-footer div.face-bg,
+.sign-up-by-key-holder .form-email .button-footer div.face-bg {
+  border: none;
 }
-#add-site .row .form-email .button-footer div.face-bg img,
-#sign-up .row .form-email .button-footer div.face-bg img {
-  left: 20px;
+#add-site .form-email .button-footer div.face-bg:after,
+.sign-up-holder .form-email .button-footer div.face-bg:after,
+.sign-up-by-key-holder .form-email .button-footer div.face-bg:after {
+  content: '';
+  position: absolute;
+  width: 1px;
+  height: 50%;
+  top: 25%;
+  right: 0;
+  background-color: #477493;
 }
-#add-site .row .form-email .button-footer div.fe-bg,
-#sign-up .row .form-email .button-footer div.fe-bg {
-  padding-left: 35px;
+.sign-up-by-key-holder .form-email .key-login {
+  margin-top: 30px;
 }
-#add-site .row .form-email .button-footer div.fe-bg img,
-#sign-up .row .form-email .button-footer div.fe-bg img {
-  left: 14px;
+.sign-up-by-key-holder .form-email .key-login.key-signup {
+  margin-top: 50px;
 }

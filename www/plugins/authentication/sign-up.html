@@ -5,7 +5,7 @@
 				<img class="logo-top" src="images/logo.jpg" alt="" />
 				<div class="key-login key-signup input-border-none">
 					
-					<div class="input-login">
+					<div class="input-login input-first">
 						<img class="icon" src="images/user-icon.png" alt="" />
 						<input class="input" type="text" placeholder="<%= MM.lang.s("username") %>" id="newusername"/>
 					</div>
@@ -26,12 +26,12 @@
 						<input class="input" type="password" placeholder="<%= MM.lang.s("password") %>" id="newpassword"/>
 						<img class="icon sun-icon" src="images/sun-icon.jpg" alt="" />
 					</div>
-					<div class="input-login" style="border-bottom:1px solid #000 !important">
+					<div class="input-login input-last" style="border-bottom:1px solid #000 !important">
 						<img class="icon" src="images/phone-icon.png" alt="" />
 						<input class="input" type="text" placeholder="<%= MM.lang.s("phonenumber") %>" id="mobile"/>
 					</div>
-					<div class="button-login button-signup">
-						<div class="xs12 button-full" >
+					<div class="button-login">
+						<div class="xs12 button-signup button-full" >
 							<a href="javascript:void(0);" onclick="MM._createAccount();">
 								<%= MM.lang.s("signuplabel") %>
 							</a>

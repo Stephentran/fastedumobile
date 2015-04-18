@@ -806,7 +806,9 @@ var MM = {
         var fbLoginStatusFailure = function (userData) {
             
         }
-        facebookConnectPlugin.getLoginStatus(fbLoginStatusSuccess, fbLoginStatusFailure);
+        if (typeof(facebookConnectPlugin) != 'undefined') {
+            facebookConnectPlugin.getLoginStatus(fbLoginStatusSuccess, fbLoginStatusFailure);
+        }
     },
     _createAccount:function() {
         var preSets = {
