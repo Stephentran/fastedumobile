@@ -45,21 +45,30 @@
       border-top: 1px solid @border-color;
       background-color: @menu-background;
       white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
+      position: relative;
 
       a {
         display: block;
         height: 64px;
         line-height: 64px;
+        padding-left: 60px;
+
+        .icon {
+          position: absolute;
+          left: 20px;
+          top: 14px;
+        }
 
         .menu-title {
           display: inline-block;
           font-size: @font-size-large;
           float: none;
-          padding-left: 20px;
           width: initial;
           color: inherit;
+          box-sizing: border-box;
+          width: 100%;
+          overflow: hidden;
+          text-overflow: ellipsis;
         }
 
         .count {
@@ -93,10 +102,10 @@
 
         a {
           line-height: 30px;
+          padding-left: 4px;
 
           .menu-title {
             line-height: 30px;
-            padding-left: 4px;
             color: #A5A5A5;
           }
         }

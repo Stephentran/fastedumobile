@@ -1714,21 +1714,29 @@ a {
   border-top: 1px solid #e5e5e5;
   background-color: #ffffff;
   white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  position: relative;
 }
 .SideMenu .menu-list .menu-item a {
   display: block;
   height: 64px;
   line-height: 64px;
+  padding-left: 60px;
+}
+.SideMenu .menu-list .menu-item a .icon {
+  position: absolute;
+  left: 20px;
+  top: 14px;
 }
 .SideMenu .menu-list .menu-item a .menu-title {
   display: inline-block;
   font-size: 14px;
   float: none;
-  padding-left: 20px;
   width: initial;
   color: inherit;
+  box-sizing: border-box;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .SideMenu .menu-list .menu-item a .count {
   display: block;
@@ -1755,10 +1763,10 @@ a {
 }
 .SideMenu .menu-list .menu-item.item-divider a {
   line-height: 30px;
+  padding-left: 4px;
 }
 .SideMenu .menu-list .menu-item.item-divider a .menu-title {
   line-height: 30px;
-  padding-left: 4px;
   color: #A5A5A5;
 }
 .SideMenu .menu-list .menu-item.no-border,
