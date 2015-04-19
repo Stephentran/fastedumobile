@@ -1621,6 +1621,48 @@ div.jqi button.jqidefaultbutton {
   font-weight: normal;
   font-style: normal;
 }
+/* Size
+--------------------------------------------------------*/
+/* Color
+--------------------------------------------------------*/
+/* Icons */
+.icon {
+  display: inline-block;
+  width: 34px;
+  height: 34px;
+  margin-bottom: -10px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.icon-course,
+.icon-assignment,
+.icon-notification,
+.icon-user,
+.icon-bell {
+  display: inline-block;
+  width: 34px;
+  height: 34px;
+  margin-bottom: -10px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.icon-course {
+  background-image: url('../images/icon-menu.png');
+}
+.icon-assignment {
+  background-image: url('../images/icon-menu2.png');
+}
+.icon-notification {
+  background-image: url('../images/icon-menu3.png');
+}
+.icon-user {
+  background-image: url('../images/icon-menu4.png');
+}
+.icon-bell {
+  background-image: url('../images/icon-menu5.png');
+}
 /* Base style */
 html * {
   font-family: "UTM Avo", sans-serif;
@@ -1633,6 +1675,101 @@ a {
   padding: 0;
   margin: 0;
   width: 100%;
+}
+/* Side Menu
+--------------------------------------------------------*/
+.SideMenu {
+  width: 280px;
+}
+.SideMenu .header-slidermenu {
+  height: 75px;
+  background-color: #00b0b0;
+}
+.SideMenu .header-slidermenu .user-title {
+  height: 32px;
+  margin: 0;
+  line-height: 32px;
+  font-size: 14px;
+  color: #FFFFFF;
+}
+.SideMenu .header-slidermenu .user-avatar {
+  width: 76px;
+  height: 76px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: #FFFFFF;
+  margin: 0 auto;
+  border-radius: 38px;
+  border: solid 2px #FFFFFF;
+}
+.SideMenu .menu-list {
+  margin: 0;
+  margin-top: 35px;
+}
+.SideMenu .menu-list .menu-item {
+  margin: 0;
+  padding: 0;
+  padding-left: 20px;
+  border-top: 1px solid #e5e5e5;
+  background-color: #ffffff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.SideMenu .menu-list .menu-item a {
+  display: block;
+  height: 64px;
+  line-height: 64px;
+}
+.SideMenu .menu-list .menu-item a .menu-title {
+  display: inline-block;
+  font-size: 14px;
+  float: none;
+  padding-left: 20px;
+  width: initial;
+  color: inherit;
+}
+.SideMenu .menu-list .menu-item a .count {
+  display: block;
+  width: 24px;
+  height: 20px;
+  line-height: 20px;
+  padding: 0;
+  text-align: center;
+  font-size: 12px;
+  border-radius: 4px;
+  position: absolute;
+  right: 8px;
+  top: 22px;
+}
+.SideMenu .menu-list .menu-item.item-active {
+  background-color: #00b0b0;
+}
+.SideMenu .menu-list .menu-item.item-active a .menu-title {
+  color: #FFFFFF;
+}
+.SideMenu .menu-list .menu-item.item-divider {
+  height: 30px;
+  background-color: #f6f6f6;
+}
+.SideMenu .menu-list .menu-item.item-divider a {
+  line-height: 30px;
+}
+.SideMenu .menu-list .menu-item.item-divider a .menu-title {
+  line-height: 30px;
+  padding-left: 4px;
+  color: #A5A5A5;
+}
+.SideMenu .menu-list .menu-item.no-border,
+.SideMenu .menu-list .menu-item:first-child {
+  border: none;
+}
+.SideMenu .menu-list .menu-item .submenu-list {
+  margin: 0;
+}
+.SideMenu .menu-list .menu-item .submenu-list .menu-item:first-child {
+  border-top: 1px solid #e5e5e5;
 }
 /* Plugins style */
 #add-site,

@@ -1,5 +1,121 @@
 #add-site {
-	padding: 0;
-	margin: 0;
-	width: 100%;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+/* Side Menu
+--------------------------------------------------------*/
+.SideMenu {
+  width: @menu-width;
+
+  .header-slidermenu {
+    height: 75px;
+    background-color: @active-color;
+
+    .user-title {
+      height: 32px;
+      margin: 0;
+      line-height: 32px;
+      font-size: @font-size-large;
+      color: #FFFFFF;
+    }
+
+    .user-avatar {
+      width: 76px;
+      height: 76px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      background-color: #FFFFFF;
+      margin: 0 auto;
+      border-radius: 38px;
+      border: solid 2px #FFFFFF;
+    }
+  }
+
+  .menu-list {
+    margin: 0;
+    margin-top: 35px;
+
+    .menu-item {
+      margin: 0;
+      padding: 0;
+      padding-left: 20px;
+      border-top: 1px solid @border-color;
+      background-color: @menu-background;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+
+      a {
+        display: block;
+        height: 64px;
+        line-height: 64px;
+
+        .menu-title {
+          display: inline-block;
+          font-size: @font-size-large;
+          float: none;
+          padding-left: 20px;
+          width: initial;
+          color: inherit;
+        }
+
+        .count {
+          display: block;
+          width: 24px;
+          height: 20px;
+          line-height: 20px;
+          padding: 0;
+          text-align: center;
+          font-size: 12px;
+          border-radius: 4px;
+          position: absolute;
+          right: 8px;
+          top: 22px;
+        }
+      }
+
+      &.item-active {
+        background-color: @active-color;
+
+        a {
+          .menu-title {
+            color: #FFFFFF;
+          }
+        }
+      }
+
+      &.item-divider {
+        height: 30px;
+        background-color: @divider-color;
+
+        a {
+          line-height: 30px;
+
+          .menu-title {
+            line-height: 30px;
+            padding-left: 4px;
+            color: #A5A5A5;
+          }
+        }
+      }
+
+      &.no-border,
+      &:first-child {
+        border: none;
+      }
+
+      .submenu-list {
+        margin: 0;
+
+        .menu-item {
+          &:first-child {
+            border-top: 1px solid @border-color;
+          }
+        }
+      }
+    }
+  }
 }

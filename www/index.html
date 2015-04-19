@@ -184,166 +184,183 @@
 </div>
 
 <script type="text/template" id="menu_template">
-<header>
-    <div class="media">
-        <div class="refresh app-ico">
-            <a href="#refresh">
-                <img width="16" height="16" src="img/reload.png" border="0">
-            </a>
+<div class="SideMenu">
+    <div class="content-slidermenu">
+        <div class="header-slidermenu">
+            <div class="user-title"><%= user.fullname %></div>
+            <div class="user-avatar" style="background-image: url('<%= MM.util.getMoodleFilePath(user.profileimageurl) %>')"></div>
         </div>
-        <div class="img">
-            <img src="<%= MM.util.getMoodleFilePath(user.profileimageurl) %>" border="0">
-        </div>
-        <div class="bd">
-            <h1><%= user.fullname %></h1>
-        </div>
-    </div>
-</header>
-
-<ul class="nav nav-v js-accordion">
-    <% _.each(plugins, function(plugin) { %>
-        <% if (typeof plugin.subMenus == "undefined" || plugin.subMenus.length == 0) { %>
-            <li class="nav-item no-submenu">
-                <a href="<%= plugin.menuURL %>" class="alink touch-row">
-                    <% if (plugin.icon) { %>
-                        <div class="plugin-ico app-ico">
-                            <img src="<%= plugin.icon %>" border="0">
-                        </div>
-                    <% } %>
-                    <div class="plugin-name">
-                        <%= MM.lang.pluginName(plugin.name) %>
-                    </div>
+        <ul class="menu-list">
+            <!-- // Sample menu -->
+            <li class="menu-item">
+                <a href="">
+                    <i class="icon-course"></i>
+                    <p class="menu-title">Courses</p>
                 </a>
             </li>
-        <% } else { %>
-            <li class="nav-item">
-                <% if (plugin.toogler) { %>
-                    <a class="toogler expand touch-row">
-                <% } else { %>
-                    <a>
-                <% }  %>
-                    <% if (plugin.icon) { %>
-                        <div class="plugin-ico app-ico">
-                            <img src="<%= plugin.icon %>" border="0">
-                        </div>
-                    <% } %>
-                    <div class="plugin-name">
-                        <%= MM.lang.pluginName(plugin.name) %>
-                    </div>
+            <li class="menu-item item-active">
+                <a href="">
+                    <i class="icon-assignment"></i>
+                    <p class="menu-title">Assignments</p>
                 </a>
-                <% if (plugin.toogler) { %>
-                    <ul class="nav submenu">
-                <% } else { %>
-                    <ul class="nav">
-                <% }  %>
-                    <% _.each(plugin.subMenus, function(menu) { %>
-                        <li class="nav-item">
-                            <a href="<%= menu.menuURL %>" class="alink touch-row">
-                                <% if (menu.icon) { %>
-                                    <div class="plugin-ico app-ico">
-                                        <img src="<%= menu.icon %>" border="0">
-                                    </div>
-                                <% } %>
-                                <div class="plugin-name">
-                                    <%= MM.lang.s(menu.name) %>
-                                </div>
-                            </a>
-                        </li>
-                    <% }); %>
-                </ul>
             </li>
-        <% } %>
-    <% }); %>
-    <li class="nav-item">
-        <a class="toogler expand touch-row section-header">
-            <div class="plugin-ico app-ico">
-                <img src="img/ico-course.png" border="0">
-            </div>
-            <div class="plugin-name">
-                <%= MM.lang.s("mycourses") %>
-            </div>
-        </a>
-        <ul class="nav submenu">
-            <% _.each(courses, function(course) { %>
-            <li class="nav-item">
-                <a href="#" class="toogler expand touch-row">
-                    <div class="plugin-name">
-                        <%= course.fullname %>
-                    </div>
+            <li class="menu-item">
+                <a href="">
+                    <i class="icon-notification"></i>
+                    <p class="menu-title">Notification</p>
+                    <span class="count">15</span>
                 </a>
-                <ul class="nav submenu">
-                    <% _.each(coursePlugins, function(plugin) { %>
-                    <li class="nav-item">
-                        <a href="<%= plugin.menuURL %><%= course.id %>" class="touch-row">
-                            <% if (plugin.icon) { %>
-                                <div class="plugin-ico app-ico">
-                                    <img src="<%= plugin.icon %>" border="0">
-                                </div>
-                            <% } %>
-                            <div class="plugin-name">
+            </li>
+            <li class="menu-item item-divider no-border">
+                <a href="">
+                    <p class="menu-title">Settings</p>
+                </a>
+            </li>
+            <li class="menu-item no-border">
+                <a href="">
+                    <i class="icon-user"></i>
+                    <p class="menu-title">Account settings</p>
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="">
+                    <i class="icon-bell"></i>
+                    <p class="menu-title">Notification settings</p>
+                </a>
+            </li>
+            <!-- // End Sample menu -->
+            <!-- // Plugin menu -->
+            <% _.each(plugins, function(plugin) { %>
+                <% if (typeof plugin.subMenus == "undefined" || plugin.subMenus.length == 0) { %>
+                    <li class="menu-item no-submenu">
+                        <a href="<%= plugin.menuURL %>">
+                            <i class="icon" style="background-image: url('<%= plugin.icon %>')"></i>
+                            <p class="menu-title">
                                 <%= MM.lang.pluginName(plugin.name) %>
-                            </div>
+                            </p>
                         </a>
+                    </li>
+                <% } else { %>
+                    <li class="menu-item">
+                        <% if (plugin.toogler) { %>
+                            <a class="toogler expand touch-row">
+                        <% } else { %>
+                            <a>
+                        <% }  %>
+                            <i class="icon" style="background-image: url('<%= plugin.icon %>')"></i>
+                            <p class="menu-title">
+                                <%= MM.lang.pluginName(plugin.name) %>
+                            </p>
+                        </a>
+                        <% if (plugin.toogler) { %>
+                            <ul class="submenu-list" style="display: none;">
+                        <% } else { %>
+                            <ul class="nav">
+                        <% }  %>
+                            <% _.each(plugin.subMenus, function(menu) { %>
+                                <li class="menu-item">
+                                    <a href="<%= menu.menuURL %>" class="alink touch-row">
+                                        <i class="icon" style="background-image: url('<%= menu.icon %>')"></i>
+                                        <p class="menu-title">
+                                            <%= MM.lang.s(menu.name) %>
+                                        </p>
+                                    </a>
+                                </li>
+                            <% }); %>
+                        </ul>
+                    </li>
+                <% } %>
+            <% }); %>
+            <li class="menu-item">
+                <a class="toogler expand touch-row section-header">
+                    <i class="icon" style="background-image: url('ourse.png')"></i>
+                    <p class="menu-title">
+                        <%= MM.lang.s("mycourses") %>
+                    </p>
+                </a>
+                <ul class="submenu-list" style="display: none;">
+                    <% _.each(courses, function(course) { %>
+                    <li class="menu-item">
+                        <a href="#" class="toogler expand touch-row">
+                            <i class="icon" style="background-image: url('<%= course.icon %>')"></i>
+                            <p class="menu-title">
+                                <%= course.fullname %>
+                            </p>
+                        </a>
+                        <ul class="submenu-list" style="display: none;">
+                            <% _.each(coursePlugins, function(plugin) { %>
+                            <li class="menu-item">
+                                <a href="<%= plugin.menuURL %><%= course.id %>" class="touch-row">
+                                    <i class="icon" style="background-image: url('<%= plugin.icon %>')"></i>
+                                    <p class="menu-title">
+                                        <%= MM.lang.pluginName(plugin.name) %>
+                                    </p>
+                                </a>
+                            </li>
+                            <% }); %>
+                        </ul>
                     </li>
                     <% }); %>
                 </ul>
             </li>
-            <% }); %>
+            <!-- // End Plugin menu -->
+            <!-- // General menu -->
+            <li class="menu-item">
+                <a href="<%= siteurl%>" target="_blank">
+                    <i class="icon" style="background-image: url('img/ico-network.png')"></i>
+                    <p class="menu-title"><%= MM.lang.s("website") %></p>
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="<%= docsurl %>" target="_blank">
+                    <i class="icon" style="background-image: url('img/ico-help.png')"></i>
+                    <p class="menu-title"><%= MM.lang.s("help") %></p>
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="#settings" class="touch-row">
+                    <i class="icon" style="background-image: url('img/ico-settings.png')"></i>
+                    <p class="menu-title"><%= MM.lang.s("settings") %></p>
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="#logout" class="touch-row">
+                    <i class="icon" style="background-image: url('img/logout.png')"></i>
+                    <p class="menu-title"><%= MM.lang.s("logout") %></p>
+                </a>
+            </li>
+            <!-- // End General menu -->
         </ul>
-    </li>
-</ul>
-
-<ul id="general-menu" class="nav nav-v js-accordion">
-    <li class="nav-item no-arrow">
-        <a href="<%= siteurl%>" target="_blank" class="touch-row">
-            <span class="plugin-ico app-ico"><img src="img/ico-network.png" border="0"></span>
-            <%= MM.lang.s("website") %>
-        </a>
-    </li>
-    <li class="nav-item no-arrow">
-        <a href="<%= docsurl %>" target="_blank" class="touch-row">
-            <span class="plugin-ico app-ico"><img src="img/ico-help.png" border="0"></span>
-            <%= MM.lang.s("help") %>
-        </a>
-    </li>
-    <li class="nav-item no-submenu">
-        <a href="#settings" class="touch-row">
-            <span class="plugin-ico app-ico"><img src="img/ico-settings.png" border="0"></span>
-            <%= MM.lang.s("settings") %>
-        </a>
-    </li>
-    <li class="nav-item no-submenu">
-        <a href="#logout" class="touch-row">
-            <span class="plugin-ico app-ico"><img src="img/logout.png" border="0"></span>
-            <%= MM.lang.s("logout") %>
-        </a>
-    </li>
-</ul>
+    </div>
+</div>
+<div class="bg-slidermenu">
+</div>
 </script>
+
 
 <script type="text/template" id="settings_template">
     <div class="settings-list">
         <ul class="nav nav-v">
-            <li class="nav-item">
+            <li class="menu-item">
                 <a href="#settings/general/" class="menu1 touch-row"><%= MM.lang.s("general") %><br></a>
             </li>
-            <li class="nav-item">
+            <li class="menu-item">
                 <a href="#settings/sync/" class="menu1 touch-row"><%= MM.lang.s("synchronization") %><br></a>
             </li>
-            <li class="nav-item">
+            <li class="menu-item">
                 <a href="#settings/spaceusage/" class="menu1 touch-row"><%= MM.lang.s("spaceusage") %><br></a>
             </li>
-            <li class="nav-item">
+            <li class="menu-item">
                 <a href="#settings/development/" class="menu1 touch-row"><%= MM.lang.s("development") %><br></a>
             </li>
-            <li class="nav-item">
+            <li class="menu-item">
                 <a href="#settings/reportbug/" class="menu1 touch-row"><%= MM.lang.s("reportabug") %><br></a>
             </li>
-            <li class="nav-item">
+            <li class="menu-item">
                 <a href="#settings/about/" class="menu1 touch-row"><%= MM.lang.s("about") %><br></a>
             </li>
             <% _.each(plugins, function(plugin) { %>
-            <li class="nav-item">
+            <li class="menu-item">
                 <a href="#settings/<%= plugin.menuURL %>" class="menu1 touch-row"><%= MM.lang.s(plugin.name) %><br></a>
             </li>
             <% }); %>
