@@ -1,0 +1,60 @@
+<div class="row">
+	<div class="form-email">
+		<div class="maps-app row">
+			<div class="row">
+				<img class="logo-top" src="images/logo.jpg" alt="" />
+				<div class="key-login">
+					<div class="slider-img">
+						<img class="logo-middle" src="images/cu-img.png" alt="" />
+					</div>
+                    <input type="hidden" id="url" value="http://2014.moodlemoot.net">
+					<div class="input-login input-first">
+						<img class="icon" src="images/icon-mail.png" alt="" />
+						<input class="input" type="text" placeholder="<%= MM.lang.s("username") %>" id="username"/>
+					</div>
+					<div class="input-box pass-li input-last">
+						<img class="icon icon-key" src="images/icon-pass.png" alt="" />
+						<input class="input" type="password" placeholder="<%= MM.lang.s("password") %>" id="password"/>
+						<img class="icon sun-icon" src="images/sun-icon.jpg" alt="" />
+					</div>
+					<div class="button-login">
+						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 button-first">
+							<a href="javascript:void(0);" onclick="MM.addSite();">
+								<%= MM.lang.s("signinlabel") %>
+							</a>
+						</div>
+						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 button-last button-signup" >
+							<a href="javascript:void(0);" onclick="MM._displaySignUpForm();">
+								<%= MM.lang.s("signuplabel") %>
+							</a>
+						</div>
+						<!-- 
+<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" >
+							<a href="javascript:void(0);" onclick="MM._displaySignUpByEmailForm();">
+								Đăng ký Bằng Key
+							</a>
+						</div>
+ -->
+						
+					</div>
+					
+					<div class="pass-req">
+						<a href=""><%= MM.lang.s("forgotpassword") %></a>
+					</div>
+<!--                    <div class="pass-req">-->
+<!--                        <a href="javascript:void(0);" onclick="MM.demoVimeo();"><%= MM.lang.s("forgotpassword") %></a>-->
+                    </div>
+				</div>
+				
+			</div>
+			<div class="button-footer">
+				<div class="face-bg">
+					<a href="javascript:void(0);" onclick="MM._loginByFacebook();"><%= MM.lang.s("signinbyfacebook") %></a>
+				</div>
+				<div class="fe-bg">
+					<a href=""><%= MM.lang.s("signinbykey") %></a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

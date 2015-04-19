@@ -381,7 +381,7 @@ var MM = {
         }
         // Load additional Js files, see MOBILE-239
         MM.loadExtraJs();
-        MM._checkFBLoginAndDisableLoginForm();
+        //MM._checkFBLoginAndDisableLoginForm();
     },
 
     _displayAddSite: function() {
@@ -575,13 +575,19 @@ var MM = {
         if (typeof(force) != "undefined") {
             settings = {};
         }
-
+        var preSets = {
+        wstoken: MM.config.current_token,
+        siteurl: MM.siteurl,
+        silently: true,
+        getFromCache: false,
+        saveToCache: true
+        };
         // For loading a site, we need the list of courses.
         MM.moodleWSCall(
             method          = 'moodle_enrol_get_users_courses',
             data            = {userid: MM.site.get('userid')},
             callBack        = MM.loadCourses,
-            preSets         = settings,
+            preSets,
             errorCallBack   = MM._displayAddSite
         );
     },
@@ -858,7 +864,6 @@ var MM = {
         }
         MM.showModalLoading(MM.lang.s("signuplabel"));
         MM.moodleWSCall('core_user_create_users', data, function(contents) {
-                        // + JSON.stringify(contents)
                         
                         if(contents != "undefined" && contents[0] != "undefined" && contents[0].username != "undefined")
                             {
@@ -880,7 +885,7 @@ var MM = {
             if(userData.status == "connected")
             {
                 var preSets = {
-                wstoken: MM.config.presets.custom_service,
+                wstoken: MM.config.presets.fb_service_token,
                 siteurl: MM.config.presets.url,
                 silently: MM.config.presets.silently,
                 getFromCache: MM.config.presets.getFromCache,
@@ -932,7 +937,6 @@ var MM = {
      * Expand the add site form with the username and password fields
      */
 _displaySignUpForm: function(){
-    alert("hello");
     $('#add-site').css('display', 'none');
     $('#sign-up').css('display', 'block');
 	$('#sign-up-by-key').css('display', 'none');
@@ -1259,7 +1263,6 @@ _displaySignUpByEmailForm: function(){
             getFromCache: false,
             saveToCache: true
         };
-                                  
                                   
         // We have a valid token, try to get the site info.
         MM.moodleWSCall('moodle_webservice_get_siteinfo', {}, function(site) {
