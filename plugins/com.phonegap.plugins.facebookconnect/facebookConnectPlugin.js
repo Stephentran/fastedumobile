@@ -145,6 +145,7 @@ if (cordova.platformId == "browser") {
 
         // Browser wrapper API ONLY
         browserInit: function (appId, version) {
+alert(appId);
             if (!version) {
                 version = "v2.0";
             }

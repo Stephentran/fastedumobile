@@ -71,6 +71,10 @@
                 <param name="ios-package" value="FacebookConnectPlugin"/>
                 <param name="onload" value="true" />
             </feature>
+            <gap:plugin name="com.phonegap.plugins.facebookconnect" version="0.11.0">
+                <param name="APP_ID" value="1435736710053061" />
+                <param name="APP_NAME" value="Fast Education" />
+            </gap:plugin>
             <plugin name="FacebookConnectPlugin" value="FacebookConnectPlugin"/>
             <access origin="https://m.facebook.com" />
             <access origin="https://graph.facebook.com" />
@@ -79,8 +83,8 @@
             <access origin="https://*.akamaihd.net" />
         </config-file>
 
-        <header-file src="platforms/ios/HelloCordova/Plugins/com.phonegap.plugins.facebookconnect/FacebookConnectPlugin.h" />
-        <source-file src="platforms/ios/HelloCordova/Plugins/com.phonegap.plugins.facebookconnect/FacebookConnectPlugin.m" />
+        <header-file src="platforms/ios/FastEduMobile/Plugins/com.phonegap.plugins.facebookconnect/FacebookConnectPlugin.h" />
+        <source-file src="platforms/ios/FastEduMobile/Plugins/com.phonegap.plugins.facebookconnect/FacebookConnectPlugin.m" />
 
         <config-file target="*-Info.plist" parent="FacebookAppID">
             <string>$APP_ID</string>

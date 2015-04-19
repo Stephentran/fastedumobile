@@ -13,6 +13,14 @@
                             "count": 1
                         },
                         {
+                            "xml": "<feature name=\"InAppBrowser\"><param name=\"ios-package\" value=\"CDVInAppBrowser\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"SplashScreen\"><param name=\"ios-package\" value=\"CDVSplashScreen\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        },
+                        {
                             "xml": "<feature name=\"FacebookConnectPlugin\"><param name=\"ios-package\" value=\"FacebookConnectPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
                             "count": 1
                         },
@@ -38,14 +46,6 @@
                         },
                         {
                             "xml": "<access origin=\"https://*.akamaihd.net\" />",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"InAppBrowser\"><param name=\"ios-package\" value=\"CDVInAppBrowser\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"SplashScreen\"><param name=\"ios-package\" value=\"CDVSplashScreen\" /><param name=\"onload\" value=\"true\" /></feature>",
                             "count": 1
                         }
                     ]
@@ -95,7 +95,7 @@
                     ],
                     "FacebookDisplayName": [
                         {
-                            "xml": "<string>Flat Education</string>",
+                            "xml": "<string>Fast Education</string>",
                             "count": 1
                         }
                     ],
@@ -113,15 +113,15 @@
         "org.apache.cordova.globalization": {
             "PACKAGE_NAME": "com.fastedu.fastedumobile"
         },
-        "com.phonegap.plugins.facebookconnect": {
-            "APP_ID": "1435736710053061",
-            "APP_NAME": "Flat Education",
-            "PACKAGE_NAME": "com.fastedu.fastedumobile"
-        },
         "org.apache.cordova.inappbrowser": {
             "PACKAGE_NAME": "com.fastedu.fastedumobile"
         },
         "org.apache.cordova.splashscreen": {
+            "PACKAGE_NAME": "com.fastedu.fastedumobile"
+        },
+        "com.phonegap.plugins.facebookconnect": {
+            "APP_ID": "1435736710053061",
+            "APP_NAME": "Fast Education",
             "PACKAGE_NAME": "com.fastedu.fastedumobile"
         }
     },

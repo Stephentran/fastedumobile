@@ -8,7 +8,7 @@
     "com.phonegap.plugins.facebookconnect": {
         "source": {
             "type": "local",
-            "path": "/Users/StephenTran/Desktop/working/projects/demo/FlatEduMobile/plugins/phonegap-facebook-plugin"
+            "path": "/Users/StephenTran/Desktop/working/projects/pluggins/com.phonegap.plugins.facebookconnect"
         }
     },
     "org.apache.cordova.inappbrowser": {
